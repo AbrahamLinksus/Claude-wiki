@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "6cda98214c15e793",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d6f4e15737f5e6c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c46eabc89c10ae97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "wiki/cpp-declarations-definitions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "cpp-declarations-definitions"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d05b7eed8bef3fcc",
+    "type": "split",
+    "children": [
+      {
+        "id": "021568b38b024182",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4850ff54c5c0e342",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "28a073ec21bba6c4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "9d0e2149e5bb217e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 299.5
+  },
+  "right": {
+    "id": "d724bf500b8e1684",
+    "type": "split",
+    "children": [
+      {
+        "id": "c7f321b65f6883df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90e68598ec6d75c0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "0b24793ceaef5488",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "a82961f2d6bc3c71",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "17888542fc9d9d75",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0864e1085a972cf0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c46eabc89c10ae97",
+  "lastOpenFiles": [
+    "wiki/cpp-introduction.md",
+    "wiki/cpp-fundamental-types.md",
+    "wiki/cpp-program-structure.md",
+    "wiki/index.md",
+    "wiki/log.md",
+    "oWiki/Claude tutorial.md",
+    "oWiki",
+    "wiki/log.md.tmp.35875.1776338358320",
+    "wiki/cpp-declarations-definitions.md",
+    "wiki/cpp-declarations-definitions.md.tmp.35875.1776338350704",
+    "wiki/cpp-fundamental-types.md.tmp.35875.1776338302273",
+    "wiki/cpp-program-structure.md.tmp.35875.1776338255613",
+    "wiki/cpp-introduction.md.tmp.35875.1776338221494",
+    "wiki/index.md.tmp.35875.1776338202673",
+    "raw/Introduction To Compilers.md",
+    "memory-allocation.md",
+    "kernel.md",
+    "wiki/intermediate-representation.md",
+    "wiki/monolithic-kernel.md",
+    "wiki/monolithic-kernel.md.tmp.35875.1776337206807",
+    "wiki/intermediate-representation.md.tmp.35875.1776337200232",
+    "wiki/kernel-architectures-overview.md",
+    "wiki/kernel-architectures-overview.md.tmp.35875.1776337129608",
+    "wiki/semantic-analysis.md",
+    "wiki/compiler-from-scratch.md",
+    "wiki/required-knowledge.md",
+    "wiki/inline-assembly.md",
+    "wiki/osdev-wiki.md",
+    "wiki/how-kernel-compiler-clib-work-together.md",
+    "wiki/introduction-osdev.md",
+    "wiki/compiler-types.md",
+    "wiki/compiler-phases.md",
+    "wiki/compilers-introduction.md",
+    "raw/Expanded Main Page - OSDev Wiki.md",
+    "CLAUDE.md",
+    "wiki/intel-high-definition-audio.md"
+  ]
+}
