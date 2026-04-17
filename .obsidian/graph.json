@@ -20,6 +20,13 @@
         "a": 1,
         "rgb": 14725458
       }
+    },
+    {
+      "query": "#rust",
+      "color": {
+        "a": 1,
+        "rgb": 16741120
+      }
     }
   ],
   "collapse-display": false,
@@ -32,6 +39,6 @@
   "repelStrength": 9.44173177083333,
   "linkStrength": 0.661702473958333,
   "linkDistance": 344,
-  "scale": 1.0534979423868303,
-  "close": false
+  "scale": 1.05349794238683,
+  "close": true
 }

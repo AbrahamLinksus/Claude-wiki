@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/cpp-declarations-definitions.md",
+                "file": "wiki/rust-variables-types.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cpp-declarations-definitions"
+              "title": "rust-variables-types"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#program",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -183,41 +182,40 @@
   },
   "active": "c46eabc89c10ae97",
   "lastOpenFiles": [
+    "wiki/rust-overview.md",
+    "wiki/index.md",
+    "wiki/log.md.tmp.160059.1776356176007",
+    "wiki/index.md.tmp.160059.1776356163946",
+    "wiki/rust-traits-generics.md",
+    "wiki/rust-traits-generics.md.tmp.160059.1776356151476",
+    "wiki/rust-error-handling.md",
+    "wiki/rust-error-handling.md.tmp.160059.1776356119630",
+    "wiki/rust-enums-pattern-matching.md",
+    "wiki/rust-enums-pattern-matching.md.tmp.160059.1776356093263",
+    "wiki/rust-structs.md",
+    "wiki/rust-structs.md.tmp.160059.1776356065979",
+    "wiki/rust-borrowing-references.md",
+    "wiki/rust-borrowing-references.md.tmp.160059.1776356045436",
+    "wiki/rust-ownership.md",
+    "wiki/rust-functions-control-flow.md",
+    "wiki/rust-functions-control-flow.md.tmp.160059.1776355994972",
+    "wiki/rust-variables-types.md",
+    "wiki/rust-variables-types.md.tmp.160059.1776355972836",
+    "wiki/rust-learning-roadmap.md",
+    "wiki/rust-overview.md.tmp.160059.1776355945013",
+    "wiki/rust-macros.md",
+    "oWiki/Rust from start.md",
     "wiki/cpp-introduction.md",
+    "wiki/cpp-declarations-definitions.md",
     "wiki/cpp-fundamental-types.md",
     "wiki/cpp-program-structure.md",
-    "wiki/index.md",
     "wiki/log.md",
     "oWiki/Claude tutorial.md",
-    "oWiki",
-    "wiki/log.md.tmp.35875.1776338358320",
-    "wiki/cpp-declarations-definitions.md",
-    "wiki/cpp-declarations-definitions.md.tmp.35875.1776338350704",
-    "wiki/cpp-fundamental-types.md.tmp.35875.1776338302273",
-    "wiki/cpp-program-structure.md.tmp.35875.1776338255613",
-    "wiki/cpp-introduction.md.tmp.35875.1776338221494",
-    "wiki/index.md.tmp.35875.1776338202673",
     "raw/Introduction To Compilers.md",
     "memory-allocation.md",
     "kernel.md",
     "wiki/intermediate-representation.md",
     "wiki/monolithic-kernel.md",
-    "wiki/monolithic-kernel.md.tmp.35875.1776337206807",
-    "wiki/intermediate-representation.md.tmp.35875.1776337200232",
-    "wiki/kernel-architectures-overview.md",
-    "wiki/kernel-architectures-overview.md.tmp.35875.1776337129608",
-    "wiki/semantic-analysis.md",
-    "wiki/compiler-from-scratch.md",
-    "wiki/required-knowledge.md",
-    "wiki/inline-assembly.md",
-    "wiki/osdev-wiki.md",
-    "wiki/how-kernel-compiler-clib-work-together.md",
-    "wiki/introduction-osdev.md",
-    "wiki/compiler-types.md",
-    "wiki/compiler-phases.md",
-    "wiki/compilers-introduction.md",
-    "raw/Expanded Main Page - OSDev Wiki.md",
-    "CLAUDE.md",
-    "wiki/intel-high-definition-audio.md"
+    "wiki/kernel-architectures-overview.md"
   ]
 }
