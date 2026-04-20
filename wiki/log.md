@@ -60,3 +60,54 @@ Append-only record of all wiki operations.
 - `rust-traits-generics.md` — Generic functions/structs/enums/methods, monomorphization (zero-cost), trait definition, implementing traits, orphan rule, default implementations, trait bounds (`+`, `where`), `impl Trait`, blanket implementations, common stdlib traits
 
 **Index updated**: yes
+
+---
+
+## 2026-04-18 — Rust Strings
+
+**Source**: https://doc.rust-lang.org/book/ch08-02-strings.html
+
+**Tag**: #rust
+
+**Pages created**:
+- `rust-strings.md` — `&str` vs `String`, UTF-8 encoding, why integer indexing is disallowed, slicing, `.chars()` vs `.bytes()`, common methods, coercion rules
+
+**Index updated**: yes
+
+---
+
+## 2026-04-18 — OS Development Knowledge Cluster
+
+**Source**: `raw/Expanded Main Page - OSDev Wiki.md`
+
+**Tag**: #os
+
+**Pages created**:
+- `os-overview.md` — Summary/topic map: learning order, all concept links, key decision points (language, kernel model, bootloader)
+- `os-toolchain.md` — GCC cross-compiler (x86_64-elf target), NASM/GAS/FASM, LD linker scripts, QEMU/Bochs emulator setup and debugging
+- `os-x86-modes.md` — Real Mode, Protected Mode (rings, GDT), Long Mode (x86-64), mode transition code, CPU register reference table
+- `os-boot-sequence.md` — BIOS vs UEFI, MBR/GPT, GRUB/Limine protocols, GDT/TSS setup, A20 line, early kernel init checklist
+- `os-interrupts.md` — IDT, gate types, exception vectors (PF, GPF, DF), PIC remapping, APIC/LAPIC/IO-APIC, NMI, ISR rules, syscall (int 0x80 vs SYSCALL MSR)
+- `os-kernel-models.md` — Monolithic vs microkernel vs exokernel vs modular, comparison table, task models (mono/multi/RT)
+- `os-memory-management.md` — Segmentation, 4-level paging, TLB, page frame allocators (bitmap/stack/buddy), heap allocators (bump/free-list/slab), MMU registers, virtual address layout
+- `os-scheduling.md` — Process vs thread, PCB fields, context switch mechanics (iretq), FCFS/round-robin/priority/MLFQ/CFS algorithms, SMP load balancing, blocking/wait queues
+- `os-ipc.md` — Message passing (pipes/queues/sockets), shared memory, signals, RPC, spinlock/mutex/semaphore/condvar, deadlock (Coffman conditions)
+- `os-hardware.md` — I/O ports vs MMIO, PIT/APIC timer/HPET, ATA/AHCI/NVMe storage, VGA text mode/linear framebuffer, PS/2 keyboard+mouse, PCI enumeration, ACPI tables (RSDP/MADT/MCFG)
+
+**Index updated**: yes
+
+---
+
+## 2026-04-18 — Agentic AI knowledge cluster (session start)
+
+**Source**: Session-built (no raw file yet)
+
+**Tag**: #agentic
+
+**Pages created**:
+- `agentic-ai-overview.md` — Summary/topic map page: all concept links, recommended reading order, roadmap
+- `agentic-agent-loop.md` — The core agent loop pattern, ReAct/Reflexion/Plan-execute variants, failure modes
+- `agentic-multi-agent.md` — Full pipeline: goal → planner → parallel workers → reviewer → final output, failure modes table
+- `agentic-langchain.md` — LangChain & LangGraph overview: chains, agents, tools, memory, state machine orchestration, vs rolling your own
+
+**Index updated**: yes
