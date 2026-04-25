@@ -56,4 +56,18 @@ Personal knowledge base — maintained by Claude Code.
 
 ---
 
-**Last updated**: 2026-04-18
+---
+
+## GitHub Copilot Certification (GH-300)
+
+- [[github-copilot-certification]] — Exam overview, domain weights, study order, and official resources
+- [[copilot-responsible-ai]] — Risks of generative AI, ethical usage, harm mitigation, validating output (15–20%)
+- [[copilot-features]] — IDE, CLI, Agent Mode, Edit Mode, MCP, Spaces, Spark, PR summaries, org policies (25–30%)
+- [[copilot-data-architecture]] — Data flow, prompt building, proxy filtering, suggestion lifecycle, LLM limits (10–15%)
+- [[copilot-prompt-engineering]] — Prompt structure, zero-shot/few-shot, context crafting, chat history (10–15%)
+- [[copilot-productivity]] — Code gen, refactoring, docs, testing, security, legacy modernization (10–15%)
+- [[copilot-privacy-safeguards]] — Content exclusions, duplication detection, security warnings, org controls (10–15%)
+
+---
+
+**Last updated**: 2026-04-25

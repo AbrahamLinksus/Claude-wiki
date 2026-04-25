@@ -98,6 +98,23 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-04-25 — GitHub Copilot Certification (GH-300)
+
+**Source**: https://learn.microsoft.com/credentials/certifications/resources/study-guides/gh-300 (web, no raw file)
+
+**Pages created**:
+- `github-copilot-certification.md` — Summary page: exam details, domain weights, recommended study order, official resources
+- `copilot-responsible-ai.md` — Risks and limitations of GenAI, ethical usage, harm mitigation, validating AI output
+- `copilot-features.md` — Copilot in IDE, CLI, Agent Mode, Edit Mode, MCP, Sub-Agents, Spaces, Spark, PR summaries, org-wide management
+- `copilot-data-architecture.md` — Data flow and sharing, prompt construction, proxy filtering, post-processing, suggestion lifecycle, LLM limits
+- `copilot-prompt-engineering.md` — Prompt structure, context determination, zero-shot/few-shot, best practices, chat history, prompt file reuse
+- `copilot-productivity.md` — Code gen, refactoring, documentation, sample data, legacy modernization, unit/integration tests, security, performance
+- `copilot-privacy-safeguards.md` — Content exclusions, editor settings, output ownership, duplication detection, security warnings, troubleshooting
+
+**Index updated**: yes
+
+---
+
 ## 2026-04-18 — Agentic AI knowledge cluster (session start)
 
 **Source**: Session-built (no raw file yet)
