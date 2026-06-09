@@ -1,11 +1,11 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": false,
-  "showAttachments": false,
+  "showTags": true,
+  "showAttachments": true,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "tag: #os",
@@ -34,6 +34,27 @@
         "a": 1,
         "rgb": 11796403
       }
+    },
+    {
+      "query": "#biometrics",
+      "color": {
+        "a": 1,
+        "rgb": 16721408
+      }
+    },
+    {
+      "query": "#DS",
+      "color": {
+        "a": 1,
+        "rgb": 16730034
+      }
+    },
+    {
+      "query": "#adsa",
+      "color": {
+        "a": 1,
+        "rgb": 11316425
+      }
     }
   ],
   "collapse-display": false,
@@ -46,6 +67,6 @@
   "repelStrength": 9.44173177083333,
   "linkStrength": 0.661702473958333,
   "linkDistance": 344,
-  "scale": 0.727696719944815,
+  "scale": 0.37905273046488785,
   "close": true
 }

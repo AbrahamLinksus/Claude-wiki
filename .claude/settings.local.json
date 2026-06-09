@@ -39,7 +39,23 @@
       "WebFetch(domain:www.cs.usfca.edu)",
       "WebFetch(domain:browncs1260.github.io)",
       "WebFetch(domain:web.stanford.edu)",
-      "WebFetch(domain:cop3402fall20.github.io)"
+      "WebFetch(domain:cop3402fall20.github.io)",
+      "Bash(python3 -c ' *)",
+      "Bash(pip install *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -m pip install python-pptx -q)",
+      "Bash(sudo pacman -S python-python-pptx --noconfirm)",
+      "Bash(libreoffice *)",
+      "Bash(pdfinfo /home/Jake/Documents/Notes/Jake/raw/Unit4_Slides.pdf)",
+      "Bash(pdfinfo /home/Jake/Documents/Notes/Jake/raw/Unit5_Slides.pdf)",
+      "Bash(pandoc \"/home/Jake/Documents/Notes/Jake/raw/Question Bank_Data Science.docx\" -t plain)",
+      "Bash(python3 *)",
+      "Read(//usr/bin/**)",
+      "Read(//home/Jake/.local/bin/**)",
+      "Bash(pacman -Q python-docx)",
+      "Bash(/home/Jake/learning/minorProject/.venv/bin/python3 *)",
+      "Bash(/home/Jake/learning/minorProject/.venv/bin/python3.13 *)",
+      "Bash(python level4.py)"
     ]
   }
 }

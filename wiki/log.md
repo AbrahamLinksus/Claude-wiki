@@ -4,6 +4,272 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-08 — Hashing source ingested: Hashing-and-Hash-Tables.pdf
+
+**Source**: `raw/Hashing-and-Hash-Tables.pdf` (Talenciaglobal, 52 pages — Intermediate→Advanced, FinTech-focused)
+
+**Tag**: #adsa
+
+**Pages created** (2):
+- `adsa-hashing-advanced.md` — Perfect hashing (2-level, O(1) worst case), Cuckoo hashing (evict-cascade, O(1) worst lookup), Robin Hood (probe distance variance reduction, P99 guarantees), Hopscotch (neighbourhood bitmap, cache-friendly concurrent), Concurrent maps (global lock / lock striping / CAS / RCU), incremental rehashing (Redis-style dual-table), pre-sizing formula, history timeline 1953–2024
+- `adsa-hashing-applications.md` — 3 FinTech use cases (UPI dedup with SHA-256+ConcurrentHashMap, fraud blacklist 200M entries Bloom+HashSet, KYC LRU cache HashMap+DLL), 8 algorithmic interview patterns table, 4 security considerations (HashDoS, timing side-channel, memory dump, password storage bcrypt/Argon2id), 4 architectural patterns (Cache-Aside, Idempotency Key, Token Bucket, Consistent Hashing), Hash Table vs BST/Skip List/Trie/Bloom Filter comparison, 5 common pitfalls
+
+**Pages updated** (4):
+- `adsa-hash-functions.md` — Added Direct Address Table framing, Universal Hashing formula with HashDoS context, division method pitfall (power-of-2 m), updated source citation
+- `adsa-collision-resolution.md` — Added Java HashMap chain→RBT upgrade at 8 entries, expanded comparison table with max α and FinTech fit columns, updated source citation
+- `adsa-python-dict.md` — Added high-bit spreading (h ^= h >> 16), language comparison table (Java/Python/C++), equals/hashCode pitfall, updated source citation
+- `adsa-hashing.md` — Updated summary links to include 2 new pages, expanded roadmap to 5 steps
+
+**Index updated**: yes
+
+---
+
+## 2026-06-08 — Hashing pages added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (4):
+- `adsa-hashing.md` — Summary/roadmap page: why O(1), links to all three sub-topics
+- `adsa-hash-functions.md` — 5 characteristics (deterministic, uniform, fast, avalanche, low collision), load factor, division/multiplication/polynomial rolling hash methods
+- `adsa-collision-resolution.md` — Chaining (LL per bucket), open addressing (linear/quadratic probing/double hashing), perturbation, tombstone deletion
+- `adsa-python-dict.md` — O(1) vs unsorted/sorted array of pairs, Python compact layout (3.6+), power-of-2 sizing, bitwise AND replaces modulo, resize thresholds
+
+**Index updated**: yes
+
+---
+
+## 2026-06-05 — Circular LL and Deque pages added; efficient deque internals
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (2):
+- `adsa-circular-ll.md` — Circular LL definition, tail-pointer trick, singly vs doubly circular, traversal do-while stopping condition, operations table, use cases (round-robin, ring buffer, playlists), gotchas
+- `adsa-deque.md` — Deque ADT (4 ops), DLL impl, circular buffer impl, unrolled linked list (node-with-array) showing why O(n/k) pointer chasing still occurs on indexed access, chunked array (dynamic array of fixed-chunk pointers) achieving true O(1) random access with only O(n/k) pointer copying on resize; full comparison table; when to use each
+
+**Pages updated** (3): `adsa-overview.md`, `wiki/index.md`, `wiki/log.md`
+
+---
+
+## 2026-06-04 — Stacks page expanded: ADT, call stack, backtracking
+
+**Pages updated**: `adsa-stacks.md`, `adsa-overview.md`
+**Added**: Stack ADT operation table, call stack / activation record anatomy (SP, BP, frame layout), stack overflow from infinite recursion, backtracking with explicit stack (maze), implicit call-stack recursion (N-Queens, Sudoku), browser back button
+
+---
+
+## 2026-06-04 — Stacks and Queues pages added
+
+**Source**: Session-built (no raw file)
+**Pages created**: `adsa-stacks.md`, `adsa-queues.md`
+**Pages updated**: `adsa-overview.md`, `index.md`
+**Coverage**: LIFO/FIFO principles, dynamic-array and linked-list implementations of both, amortized O(1) analysis, dead-slot memory problem in array queues, cache-locality (1:7 vs 1:0 hit ratio) comparison
+
+---
+
+## 2026-06-04 — Rabin-Karp page created + KMP search dry run added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `rabin-karp.md` — Rolling hash theory, sliding window formula, spurious hits, pseudocode, full dry run table for "AABAAB"/"AAB" with manual rolling hash steps, Python code, KMP vs Rabin-Karp comparison table
+
+**Pages updated** (1):
+- `kmp-algorithm.md` — Added search dry run (16-step table for "AABAACDAABAAB"/"AABAAB" showing mismatch fallback cascade), fixed output comment bug ([0,6] → [0,3,6])
+
+**Index updated**: yes
+
+---
+
+## 2026-06-04 — KMP Algorithm page created
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `kmp-algorithm.md` — Why KMP exists, LPS theory (proper prefix = suffix), construction algorithm (3 cases), pseudocode, full dry run table for "AABAAB", Python code for compute_lps + kmp_search, complexity table
+
+**Index updated**: yes
+
+---
+
+## 2026-06-04 — XOR Linked List page created
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `xor-linked-list.md` — npx = id(prev) ^ id(next) theory, node structure with ctypes, insert at head, forward traversal, backward traversal, full Python example, complexity table, GC limitations
+
+**Index updated**: yes
+
+---
+
+## 2026-06-03 — ADSA arrays: Kadane's algorithm added
+
+**Tag**: #adsa
+
+**Pages updated** (1):
+- `adsa-arrays.md` — Added Kadane's algorithm: max subarray, greedy local decision, pseudocode, all-negative edge case, O(n)/O(1) complexity
+
+---
+
+## 2026-06-03 — ADSA arrays: prefix sum + difference array added
+
+**Tag**: #adsa
+
+**Pages updated** (1):
+- `adsa-arrays.md` — Added: prefix sum array (O(1) range query, construction, constraint), difference array (O(1) range update, reconstruction, cost comparison table), updated summary table to cover all four array types
+
+**Index updated**: no (page already indexed)
+
+---
+
+## 2026-06-03 — ADSA arrays page created
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-arrays.md` — Static arrays, dynamic array reallocation, amortized O(1) append (accounting method), growth factor trade-off table, operation complexity table
+
+**Pages updated** (1):
+- `adsa-overview.md` — Added Arrays section link
+
+**Index updated**: yes
+
+---
+
+## 2026-06-03 — ADSA concept initialized
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-overview.md` — Shell page; will grow as Q&A sessions populate it
+
+**Index updated**: yes
+
+---
+
+## 2026-05-12 — Unit 3 revision created + Unit 2 revision completed
+
+**Source**: `Unit III - Data Science.pptx.pdf`
+
+**Tag**: #DS
+
+**Pages created** (1):
+- `unit3-revision.md` — 18 sections: static vs interactive, Matplotlib components, bar chart, subplots, annotations/savefig, Seaborn scatter (day vs tip), histogram+KDE, boxplot, pairplot, univariate numerical, univariate categorical, compare-groups (6 chart types), distribution charts (4 types), multi-plot dashboard, 3D surface, anomaly detection visualization, Seaborn vs Matplotlib comparison table, quick reference card
+
+**Pages updated** (1):
+- `unit2-revision.md` — Sections 6–11 rewritten in unit1 format with verified outputs: transformation techniques (6 types with code), binning (pd.cut/pd.qcut with outputs), normalization vs standardization (formulas + output table), string manipulation (basic + pandas vectorised), summarizing (centrality/dispersion/describe), outlier detection (IQR + Z-score with fence values and output)
+
+**Index updated**: yes
+
+---
+
+## 2026-05-12 — Unit 2 revision + exam roadmap created
+
+**Source**: `Unit II - Data Science.pptx.pdf` (113 pages), `Question Bank_Data Science.docx`
+
+**Tag**: #DS
+
+**Pages created** (2):
+- `unit2-revision.md` — Progressive study notes with full code: data wrangling 6-step cycle, clean→transform→merge pipeline, combining datasets (merge/concat/combine_first/join), reshaping (pivot/melt/stack/unstack), missing data handling, 6 transformation techniques, binning (pd.cut/pd.qcut), normalization vs standardization, string manipulation, summarizing (centrality/dispersion/distribution), outlier detection (IQR + Z-score)
+- `unit2-exam-roadmap.md` — QB-mapped priority tiers: coverage map table for all 16 Unit 2 QB questions, Tier 1 (11 must-know cold with full code), Tier 2 (6 know-well with code), Tier 3 (short recall), quick reference card
+
+**Index updated**: yes
+
+---
+
+## 2026-05-11 — Unit 1 revision page created
+
+**Page created**: `unit1-revision.md`
+
+**Content**: Progressive study notes built during learning session. Covers argsort, lexsort (strings + complex arrays), transpose, reshape, fillna with mean/mode, rank.
+
+**Index updated**: yes
+
+---
+
+## 2026-05-11 — Data Science question bank expansion
+
+**Source**: `Question Bank_Data Science.docx`
+
+**Tag**: #DS
+
+**Pages updated** (5 existing pages expanded):
+- `numpy.md` — added: transpose, argsort, lexsort (multi-column sort), complex array sort, first/last name sort, array equality (array_equal vs allclose), NumPy vs Pandas comparison table
+- `pandas.md` — added: CSV read + describe/info, multiple condition selection (&/|/~), Web API→DataFrame, BeautifulSoup web scraping, open data vs API comparison, MultiIndex hierarchy, pivot_table, groupby agg, business dates (BusinessDay/BusinessMonthEnd)
+- `missing-data-handling.md` — added: full IQR outlier detection code, full Z-score detection code, IQR vs Z-score comparison table, impact of improper outlier handling
+- `data-transformation.md` — added: standardization vs normalization clear distinction table, binning with frequency analysis (pd.cut/qcut + value_counts), why transformation is critical before modeling, full data cleaning code example
+- `seaborn-visualization.md` — added: static vs interactive, customized bar chart, histogram+KDE, boxplot by group, day vs tip scatter, plot styling (annotations/fonts/colors), univariate guide (numerical + categorical), bivariate guide, compare-groups charts (6 types), distribution charts (4 types), multi-plot dashboard, anomaly detection with visualization
+
+**Index updated**: no (pages already indexed)
+
+---
+
+## 2026-05-11 — Data Science course ingestion (21CSS303T)
+
+**Sources**: `Unit I- Data Science.pptx.pdf` (161 pages), `Unit II - Data Science.pptx.pdf` (113 pages), `Unit III - Data Science.pptx.pdf` (91 pages), `Question Bank_Data Science.docx`
+
+**Tag**: #DS
+
+**Pages created** (11):
+- `data-science-overview.md` — Summary page: topic map + learning roadmap
+- `data-science-process.md` — Big Data 3 V's, 6-step DS process, statsmodels OLS, facets of data
+- `data-storage-hierarchy.md` — Database/DM/DWH/Data Lake hierarchy, comparisons, open data providers
+- `data-preparation.md` — Cleansing, transformation, combining; the data prep pipeline
+- `missing-data-handling.md` — Detection, listwise/pairwise deletion, 6 imputation methods, outlier types, boxplot/IQR/Z-score
+- `numpy.md` — ndarray, 10+ creation functions, identity vs eye, indexing/slicing, copying (3 methods), nditer, reshape, flatten
+- `pandas.md` — Series and DataFrame creation/indexing/ops, alignment, NaN handling, groupby, rank (4 methods), sort
+- `data-wrangling.md` — 6-step wrangling cycle, large data libraries, merge/concat/join/combine_first, pivot/melt/stack/unstack
+- `data-transformation.md` — 6 transformation types, string ops, summarizing (centrality/dispersion/distribution), binning (3 types), Z-score/Min-Max standardization
+- `matplotlib.md` — Component model, subplots, axes/ticks/labels/legends, annotations, savefig, full example
+- `seaborn-visualization.md` — Scatter/line/histogram/boxplot/pairplot/wordcloud, 3D scatter/line/surface with mpl_toolkits
+
+**Index updated**: yes
+
+---
+
+## 2026-05-10 — Biometrics course ingestion (6 source files)
+
+**Sources**: Unit1_Biometrics(Part-1).pptx, Updated Unit1_Biometrics(Part-2).pptx, Unit2_Biometrics(1).pptx, Unit3_Biometrics(1).pptx, Unit4_Slides.pdf, Unit5_Slides.pdf
+
+**Tag**: #biometrics
+
+**Pages created** (17):
+- `biometrics-overview.md` — Summary page: topic map + recommended learning order
+- `biometric-fundamentals.md` — Pipeline, verification vs identification, gallery vs probe, error rates
+- `biometric-traits.md` — 7 factors, 5 trait categories, physiological vs behavioral
+- `biometric-system-modules.md` — 5 modules, enrollment vs authentication flow
+- `image-processing-basics.md` — 10 steps, image types, point operations, interpolation, thresholding
+- `image-enhancement.md` — Negatives, contrast stretching, CDR, gray-level slicing, histogram equalization
+- `image-segmentation.md` — Threshold, Sobel/Canny, region growing, split/merge, k-means, ANN
+- `fingerprint-sensors.md` — FTIR, capacitance, ultrasound, temperature, piezoelectric; plain/rolled/sweep
+- `fingerprint-feature-extraction.md` — 4-step algorithm: orientation, ridge extraction, Poincaré index, binarization
+- `fingerprint-recognition.md` — L1/L2/L3 levels, pattern types, minutiae matching, AFIS, latent vs live-scan
+- `pattern-recognition.md` — Full pipeline, feature vectors, classifiers, Bayes, decision theory
+- `dimensionality-reduction.md` — PCA vs LDA, Fisher's criterion, worked PCA example, discriminant function
+- `multibiometrics.md` — 5 evidence sources, 3 acquisition modes, multi-algorithmic/instance/sensorial
+- `biometric-fusion.md` — All 5 fusion levels with formulas; score-level taxonomy; Borda count
+- `biometric-security.md` — 4 threats, 5 vulnerability areas, spoofing/MITM/replay/hill-climbing
+- `template-protection.md` — 3 properties, 4 approaches, Table 7.1, key-binding vs key-generating
+- `biometric-applications.md` — Access control, airport, Aadhaar, banking, AFIS, embedded, match-on-card
+
+**Index updated**: yes
+
+---
+
 ## 2026-04-16 — Session start: C++ from scratch
 
 **Source**: https://en.cppreference.com/w/cpp (devdocs.io/cpp mirrors this)

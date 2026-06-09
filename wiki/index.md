@@ -70,4 +70,71 @@ Personal knowledge base — maintained by Claude Code.
 
 ---
 
-**Last updated**: 2026-04-25
+---
+
+## Biometrics
+
+- [[biometrics-overview]] — Full topic map and recommended learning order for the biometrics course (#biometrics)
+- [[biometric-fundamentals]] — System pipeline, verification vs identification (1:1 / 1:N), gallery vs probe, error rates (#biometrics)
+- [[biometric-traits]] — 7 trait factors (Universality → Circumvention), 5 trait taxonomy categories (#biometrics)
+- [[biometric-system-modules]] — 5 modules: sensor, quality assessment, feature extraction, matching, database (#biometrics)
+- [[image-processing-basics]] — 10 fundamental steps, image types, point operations, interpolation, thresholding (#biometrics)
+- [[image-enhancement]] — Negatives, contrast stretching, CDR, gray-level slicing, histogram equalization (#biometrics)
+- [[image-segmentation]] — Threshold, edge-based (Sobel/Canny), region-based (split/merge), clustering, ANN (#biometrics)
+- [[fingerprint-sensors]] — FTIR, capacitance, ultrasound, temperature differential, piezoelectric; plain/rolled/sweep (#biometrics)
+- [[fingerprint-feature-extraction]] — 4-step algorithm: orientation, ridge extraction, Poincaré index, binarization (#biometrics)
+- [[fingerprint-recognition]] — Feature levels L1/L2/L3, pattern types, minutiae matching, AFIS (#biometrics)
+- [[pattern-recognition]] — Full pipeline, feature vectors, classifiers, Bayes, normative vs descriptive decision theory (#biometrics)
+- [[dimensionality-reduction]] — PCA (unsupervised, max variance) vs LDA (supervised, Fisher's criterion), worked example (#biometrics)
+- [[multibiometrics]] — 5 evidence sources, 3 acquisition modes, multi-algorithmic/instance/sensorial types (#biometrics)
+- [[biometric-fusion]] — Fusion at sensor/feature/score/rank/decision level; sum/product/min/max; Borda count (#biometrics)
+- [[biometric-security]] — 4 threats, 5 vulnerability areas (A–E), spoofing/MITM/replay/hill-climbing attacks (#biometrics)
+- [[template-protection]] — 3 required properties, 4 approaches, Table 7.1 full comparison (#biometrics)
+- [[biometric-applications]] — Access control, airport/immigration, Aadhaar, banking, AFIS, match-on-card (#biometrics)
+
+---
+
+## Data Science (21CSS303T)
+
+- [[data-science-overview]] — Full topic map and learning roadmap for the SRM Data Science course (#DS)
+- [[data-science-process]] — Big Data 3 V's, 6-step DS process, model execution with statsmodels (#DS)
+- [[data-storage-hierarchy]] — Database → Data Mart → DWH → Data Lake; comparisons; open data providers (#DS)
+- [[data-preparation]] — Data cleansing, transformation, combining; the full prep pipeline (#DS)
+- [[missing-data-handling]] — Detection, deletion (listwise/pairwise), imputation, outlier types, IQR/Z-score (#DS)
+- [[numpy]] — ndarray, creation functions, indexing, copying, iterating, identity/eye, reshape, flatten (#DS)
+- [[pandas]] — Series, DataFrame, indexing (loc/iloc/at), rank, sort, alignment, groupby (#DS)
+- [[data-wrangling]] — 6-step wrangling cycle, large data libs, merge/concat/join/combine_first, pivot/melt/stack (#DS)
+- [[data-transformation]] — Cleaning steps, smoothing/generalization/aggregation, binning, Z-score/Min-Max (#DS)
+- [[matplotlib]] — Components, subplots, axes/ticks/labels/legends, annotations, savefig (#DS)
+- [[seaborn-visualization]] — Scatter/line/boxplot/pairplot/wordcloud, 3D scatter/line/surface plots (#DS)
+- [[unit1-revision]] — Progressive revision notes: argsort, lexsort, transpose, reshape, fillna, rank (#DS)
+- [[unit1-exam-roadmap]] — QB-mapped priority tiers for Unit 1: NumPy sorting, Pandas ops, DS process (#DS)
+- [[unit2-revision]] — Progressive revision notes: wrangling, clean/merge/reshape, binning, outliers, strings (#DS)
+- [[unit2-exam-roadmap]] — QB-mapped priority tiers for Unit 2: merge, pivot, IQR, Z-score, normalization (#DS)
+- [[unit3-revision]] — Progressive revision notes: Matplotlib, Seaborn, subplots, distributions, 3D, dashboards (#DS)
+
+---
+
+---
+
+## Advanced Data Structures and Algorithms
+
+- [[adsa-overview]] — Overview page; populated via Q&A (#adsa)
+- [[adsa-arrays]] — Static arrays, dynamic reallocation, amortized O(1) append (#adsa)
+- [[adsa-stacks]] — LIFO, array-backed vs LL-backed, amortized O(1) push, O(1) pop (#adsa)
+- [[adsa-queues]] — FIFO, array-backed dead-slot problem, LL head+tail, cache-miss analysis (#adsa)
+- [[adsa-circular-ll]] — Circular LL, tail-pointer trick, singly vs doubly circular, traversal gotchas (#adsa)
+- [[adsa-deque]] — Deque ADT, circular buffer, unrolled LL, chunked array with O(1) random access (#adsa)
+- [[xor-linked-list]] — Memory-efficient doubly linked list using XOR of addresses as a single npx pointer (#adsa)
+- [[kmp-algorithm]] — LPS array construction, pseudocode, dry run, search dry run with fallback, O(n+m) implementation (#adsa)
+- [[rabin-karp]] — Rolling hash theory, spurious hits, pseudocode, dry run, KMP vs Rabin-Karp comparison (#adsa)
+- [[adsa-hashing]] — Hash table overview and roadmap: O(1) access, hash functions, collision resolution (#adsa)
+- [[adsa-hash-functions]] — 5 characteristics: deterministic, uniform, fast, avalanche, low collision; load factor (#adsa)
+- [[adsa-collision-resolution]] — Chaining vs open addressing; linear, quadratic (perturbation), double hashing; tombstones (#adsa)
+- [[adsa-python-dict]] — O(1) vs array of pairs; Python compact layout; bitwise AND replaces modulo for power-of-2 tables (#adsa)
+- [[adsa-hashing-advanced]] — Perfect hashing, Cuckoo hashing, Robin Hood, Hopscotch, concurrent maps (CAS/RCU), incremental rehashing (#adsa)
+- [[adsa-hashing-applications]] — UPI dedup, fraud blacklist, KYC LRU cache; 8 interview patterns; HashDoS/password security; Cache-Aside/Consistent Hashing (#adsa)
+
+---
+
+**Last updated**: 2026-06-03
