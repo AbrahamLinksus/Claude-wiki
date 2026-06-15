@@ -147,6 +147,7 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-b-tree-operations]] — Search, insert (proactive split), delete (proactive fill/merge); two full dry runs with t=2 (#adsa)
 - [[adsa-b-plus-trees]] — B+ tree overview: all data in leaves, internal nodes as pure index, linked leaf layer, range query O(log n + k), vs B-tree comparison (#adsa)
 - [[adsa-b-plus-tree-operations]] — Search, leaf split (copy-up) vs internal split (push-up), insert dry run (10 keys, shows internal split), delete dry run (merge + stale separator), range query algorithm (#adsa)
+- [[trees-compiler-optimization]] — How ADSA tree structures map to compiler internals: AST traversal, symbol tables (RBT), IR arena layout, B+ tree query optimizers, dominator trees (#adsa)
 
 ---
 
