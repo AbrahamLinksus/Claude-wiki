@@ -140,6 +140,9 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-avl-trees]] — AVL tree overview: balance factor, 1.44 log n height guarantee, AVL vs Red-Black comparison (#adsa)
 - [[adsa-avl-rotations]] — All 4 rotation cases (LL/RR single, LR/RL double) with ASCII diagrams and pseudocode (#adsa)
 - [[adsa-avl-operations]] — Insert and delete algorithms, two full dry runs (LR case + delete with rebalance), Python implementation (#adsa)
+- [[adsa-red-black-trees]] — RBT overview: 5 properties, black-height, 2 log n height proof, 2-3-4 isomorphism, AVL vs RBT (#adsa)
+- [[adsa-rbt-insert]] — 3 insert fix-up cases (Uncle Red, Triangle, Line) with diagrams, full 6-key dry run showing all cases, Python code (#adsa)
+- [[adsa-rbt-delete]] — Double-black concept, 4 delete fix-up cases, two dry runs (Case 4 + Case 2), complete Python implementation (#adsa)
 
 ---
 
