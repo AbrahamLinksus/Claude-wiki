@@ -4,6 +4,36 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-15 — AVL Trees pages added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (3):
+- `adsa-avl-trees.md` — Summary page: why AVL exists (BST degeneracy), balance factor definition, 1.44 log₂ n height guarantee (Fibonacci AVL worst case), AVL vs Red-Black Tree comparison table, topic map and roadmap
+- `adsa-avl-rotations.md` — All 4 rotation cases with ASCII diagrams; detection logic (same-sign BF = single, opposite-sign = double); pseudocode for right_rotate and left_rotate; LL/RR single rotations; LR/RL double rotations step-by-step; key invariants after rotation; O(1) complexity
+- `adsa-avl-operations.md` — Height/BF utility functions; insert algorithm (BST + retrace + at most 1 rotation); full 5-step insert dry run (30→20→10→25→27) triggering LL and LR cases; delete algorithm (3 BST sub-cases + multi-rotation retrace); delete dry run (remove 10, triggers RR, BF=0 special case); two-children delete dry run; complexity table; full Python implementation
+
+**Index updated**: yes
+
+---
+
+## 2026-06-11 — Binary Trees pages added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (3):
+- `adsa-binary-trees.md` — Summary page: what a binary tree is, DOM as a real-world example, type taxonomy (full/complete/perfect/heap), roadmap to BSTs/heaps/balanced trees
+- `adsa-binary-tree-representation.md` — Pointer (linked) vs array representation; index formula (2i+1 / 2i+2 / (i-1)//2); why sparse trees waste memory in arrays; heaps as the array-based sweet spot (complete BT + left-aligned last level = dense array); full trade-off table
+- `adsa-tree-traversal.md` — Core insight (frontier DS determines order); BFS with queue (FIFO/oldest-first, level-by-level, dry-run table); DFS with stack (LIFO/newest-first, branch-by-branch); three DFS orderings (pre/in/post) with use cases; queue vs stack side-by-side comparison; random exploration (pros: escape dead-ends, MCTS; cons: non-reproducible, no shortest-path guarantee)
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-08 — Hashing source ingested: Hashing-and-Hash-Tables.pdf
 
 **Source**: `raw/Hashing-and-Hash-Tables.pdf` (Talenciaglobal, 52 pages — Intermediate→Advanced, FinTech-focused)
