@@ -145,6 +145,8 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-rbt-delete]] — Double-black concept, 4 delete fix-up cases, two dry runs (Case 4 + Case 2), complete Python implementation (#adsa)
 - [[adsa-b-trees]] — B-tree overview: disk I/O motivation, min-degree t, 6 properties, height formula, comparison with BST/AVL/RBT, isomorphism with 2-3-4/RBT (#adsa)
 - [[adsa-b-tree-operations]] — Search, insert (proactive split), delete (proactive fill/merge); two full dry runs with t=2 (#adsa)
+- [[adsa-b-plus-trees]] — B+ tree overview: all data in leaves, internal nodes as pure index, linked leaf layer, range query O(log n + k), vs B-tree comparison (#adsa)
+- [[adsa-b-plus-tree-operations]] — Search, leaf split (copy-up) vs internal split (push-up), insert dry run (10 keys, shows internal split), delete dry run (merge + stale separator), range query algorithm (#adsa)
 
 ---
 
