@@ -4,6 +4,17 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-15 — Trees → Compiler Optimization cross-reference page added
+
+**Source**: Q&A discussion
+
+**Pages created** (1):
+- `trees-compiler-optimization.md` — Maps each ADSA tree page to its compiler counterpart: AST node structure (binary trees), post/pre-order traversal for code generation, RBT for symbol tables, arena allocation for IR layout, B+ tree for SQL query optimizers; notes dominator trees as the missing next page
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-15 — B+ Trees pages added
 
 **Source**: Session-built (no raw file)
