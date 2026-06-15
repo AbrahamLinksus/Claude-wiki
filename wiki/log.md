@@ -4,6 +4,21 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-15 — Red-Black Trees pages added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (3):
+- `adsa-red-black-trees.md` — Summary page: what RBTs are, all 5 properties with explanations, black-height definition, 2 log₂(n+1) height proof (2-step: minimum nodes from BH + BH ≥ h/2), AVL vs RBT full comparison table, 2-3-4 tree isomorphism, topic map and roadmap
+- `adsa-rbt-insert.md` — 3 insert fix-up cases (Case 1: Uncle Red recolor+propagate; Case 2: Triangle rotate; Case 3: Line rotate+recolor) with ASCII diagrams; full 6-key dry run inserting 41,38,31,12,19,8 triggering Case 3, Case 1, Case 2→3, Case 1; black-height verification table; complexity (≤2 rotations); Python insert code
+- `adsa-rbt-delete.md` — Double-black concept; BST delete 3 sub-cases; when fix-up is skipped (deleted Red, replacement Red); 4 fix-up cases (Case 1: w Red rotate; Case 2: w Black both-children-Black recolor; Case 3: w Black near-Red far-Black rotate; Case 4: w Black far-Red rotate+recolor) with ASCII diagrams; Dry Run 1 (delete 5 from 10,5,15,20 tree → Case 4); Dry Run 2 (delete from 10,5,15 tree → Case 2 propagate to root); complexity (≤3 rotations); full Python implementation
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-15 — AVL Trees pages added
 
 **Source**: Session-built (no raw file)
