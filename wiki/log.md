@@ -4,6 +4,20 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-15 — B+ Trees pages added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (2):
+- `adsa-b-plus-trees.md` — Summary page: what makes B+ trees different (data only in leaves, internal nodes as pure routing index, linked leaf chain), structure diagram for internal vs leaf nodes, separator key convention, B-tree vs B+ tree full comparison table, linked leaf layer and range query O(log n + k) explanation, order m parameters, real-world uses (MySQL InnoDB, PostgreSQL, SQLite, NTFS), topic map
+- `adsa-b-plus-tree-operations.md` — Search algorithm; two split types (leaf split: copy-up first right key vs internal split: push-up middle key) with before/after diagrams; insert algorithm; insert dry run inserting 10 keys (2,3,5,7,11,17,19,23,29,31) showing leaf splits through tree height 1 then internal split at root creating height 2; delete dry run deleting 11 (underflow → merge with right sibling, separator removed from parent, stale-separator note); range query algorithm O(log n + k); leaf vs internal split summary table
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-15 — B-Trees pages added
 
 **Source**: Session-built (no raw file)
