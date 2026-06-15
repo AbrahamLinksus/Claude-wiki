@@ -4,6 +4,20 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-15 — B-Trees pages added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (2):
+- `adsa-b-trees.md` — Summary page: motivation (disk I/O cost vs RAM), minimum degree t vs order m terminology, all 6 B-tree properties, height formula O(log_t n), B-tree vs BST/AVL/RBT comparison table, real-world uses (MySQL InnoDB, PostgreSQL, NTFS), isomorphism with RBT via 2-3-4 tree encoding, topic map
+- `adsa-b-tree-operations.md` — Search algorithm, insert with proactive top-down splitting (split pseudocode + insert pseudocode), insert dry run inserting 7 keys showing root split and child split; delete with 3 cases (leaf direct, internal node 2a/2b/2c, descend with underflow 3a/3b), delete dry run showing Case 3a borrow-from-sibling and Case 3b merge; strategy comparison table; height growth/shrink rules
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-15 — Red-Black Trees pages added
 
 **Source**: Session-built (no raw file)
