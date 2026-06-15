@@ -134,7 +134,13 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-python-dict]] — O(1) vs array of pairs; Python compact layout; bitwise AND replaces modulo for power-of-2 tables (#adsa)
 - [[adsa-hashing-advanced]] — Perfect hashing, Cuckoo hashing, Robin Hood, Hopscotch, concurrent maps (CAS/RCU), incremental rehashing (#adsa)
 - [[adsa-hashing-applications]] — UPI dedup, fraud blacklist, KYC LRU cache; 8 interview patterns; HashDoS/password security; Cache-Aside/Consistent Hashing (#adsa)
+- [[adsa-binary-trees]] — Binary tree overview: DOM example, types (full/complete/heap), topic map for trees (#adsa)
+- [[adsa-binary-tree-representation]] — Pointer vs array storage, index formula, heap shape guarantee, memory trade-off table (#adsa)
+- [[adsa-tree-traversal]] — BFS (queue/oldest-first), DFS (stack/newest-first), three DFS orderings, random exploration (#adsa)
+- [[adsa-avl-trees]] — AVL tree overview: balance factor, 1.44 log n height guarantee, AVL vs Red-Black comparison (#adsa)
+- [[adsa-avl-rotations]] — All 4 rotation cases (LL/RR single, LR/RL double) with ASCII diagrams and pseudocode (#adsa)
+- [[adsa-avl-operations]] — Insert and delete algorithms, two full dry runs (LR case + delete with rebalance), Python implementation (#adsa)
 
 ---
 
-**Last updated**: 2026-06-03
+**Last updated**: 2026-06-11
