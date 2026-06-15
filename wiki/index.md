@@ -143,7 +143,9 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-red-black-trees]] — RBT overview: 5 properties, black-height, 2 log n height proof, 2-3-4 isomorphism, AVL vs RBT (#adsa)
 - [[adsa-rbt-insert]] — 3 insert fix-up cases (Uncle Red, Triangle, Line) with diagrams, full 6-key dry run showing all cases, Python code (#adsa)
 - [[adsa-rbt-delete]] — Double-black concept, 4 delete fix-up cases, two dry runs (Case 4 + Case 2), complete Python implementation (#adsa)
+- [[adsa-b-trees]] — B-tree overview: disk I/O motivation, min-degree t, 6 properties, height formula, comparison with BST/AVL/RBT, isomorphism with 2-3-4/RBT (#adsa)
+- [[adsa-b-tree-operations]] — Search, insert (proactive split), delete (proactive fill/merge); two full dry runs with t=2 (#adsa)
 
 ---
 
-**Last updated**: 2026-06-11
+**Last updated**: 2026-06-15
