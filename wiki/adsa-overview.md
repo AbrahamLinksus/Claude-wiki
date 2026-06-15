@@ -19,8 +19,10 @@
 - [[adsa-circular-ll]] — Circular LL, tail-pointer trick, singly vs doubly circular, traversal stopping condition
 - [[adsa-deque]] — Double-ended queue ADT, circular buffer, unrolled LL, chunked array (O(1) random access)
 
-## B-Trees
+## B-Trees and B+ Trees
 - [[adsa-b-trees]] — B-tree overview: disk I/O motivation, minimum degree t, 6 properties, height formula, comparison with BST/AVL/RBT
 - [[adsa-b-tree-operations]] — Search, insert with proactive splitting, delete with proactive fill/merge; two full dry runs
+- [[adsa-b-plus-trees]] — B+ tree: all data in leaves, internal nodes as pure index, linked leaf layer, O(log n + k) range queries
+- [[adsa-b-plus-tree-operations]] — Search, leaf split (copy-up) vs internal split (push-up), insert + delete dry runs, range query
 
 #adsa
