@@ -75,5 +75,6 @@ Finding the shortest number of hops between two people in a social network: star
 - Social network "degrees of separation" / friend suggestions
 - Finding all nodes reachable within k steps
 - Broadcasting/network layer protocols (e.g. routing table construction)
+- Flood fill on grids ([[adsa-flood-fill]]) — BFS variant avoids recursion-depth issues on large regions
 
 #adsa
