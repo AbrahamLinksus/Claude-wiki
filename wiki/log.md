@@ -4,6 +4,25 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-16 — DAG page added; all graph pages expanded with full template
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-dag.md` — Dedicated DAG page: definition (directed + acyclic), advantages/disadvantages, adjacency list + in-degree array representation, cycle-prevention insert pseudocode, topological sort (Kahn's algorithm) pseudocode, use cases (build systems, scheduling, prerequisites, package managers), examples (Makefile, course prereqs, npm/pip, git history)
+
+**Pages updated** (4):
+- `adsa-graphs.md` — Added Advantages, Disadvantages, Representation (adjacency list vs matrix table + diagram), Pseudocode for Creation, Use Cases sections; topic map now links `adsa-dag`
+- `adsa-directed-undirected-graphs.md` — Added Advantages/Disadvantages (directed vs undirected), Representation table, creation pseudocode, Use Cases section
+- `adsa-cyclic-acyclic-graphs.md` — Added Advantages/Disadvantages, Representation (cycle-detection approach), DFS cycle-detection pseudocode (directed), Use Cases section; links to new `adsa-dag` page
+- `adsa-weighted-unweighted-graphs.md` — Added Advantages/Disadvantages, Representation table, weighted-edge creation pseudocode, Use Cases section; links to new `adsa-dag` page
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-16 — Graphs split into sub-pages; weighted/unweighted added
 
 **Source**: Session-built (no raw file)
