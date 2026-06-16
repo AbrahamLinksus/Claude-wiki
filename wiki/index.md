@@ -160,6 +160,7 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-bfs]] — Graph BFS: queue-based level-order traversal, visited set for cycles, shortest path in unweighted graphs, web crawler/social network use cases (#adsa)
 - [[adsa-dfs]] — Graph DFS: stack/recursion-based depth traversal, visited set for cycles, maze/backtracking/topological sort/cycle detection use cases (#adsa)
 - [[adsa-flood-fill]] — BFS/DFS on an implicit grid graph; paint bucket/Minesweeper/connected-component use cases; grid dry run (#adsa)
+- [[adsa-toposort]] — Topological sort: Kahn's algorithm (BFS) vs DFS finish-time method, dry runs, comparison table (#adsa)
 
 ---
 
