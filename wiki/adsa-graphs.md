@@ -97,7 +97,7 @@ function addEdge(graph, u, v, directed = False):
 2. Cycles and DAGs → [[adsa-cyclic-acyclic-graphs]], [[adsa-dag]]
 3. Edge weights → [[adsa-weighted-unweighted-graphs]]
 3a. Vertex indegree/outdegree → [[adsa-indegree-outdegree]]
-4. Traversal (BFS/DFS on graphs vs trees) — _next topic_
+4. Traversal (BFS/DFS on graphs vs trees) → [[adsa-bfs]], [[adsa-dfs]]
 5. Shortest path algorithms (Dijkstra, Bellman-Ford) — _next topic_
 6. Minimum spanning trees (Prim's, Kruskal's) — _next topic_
 
