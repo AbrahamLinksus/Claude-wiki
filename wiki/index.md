@@ -155,6 +155,7 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-weighted-unweighted-graphs]] — Edge cost vs equal edges: adv/disadv, representation, pseudocode, Dijkstra/Bellman-Ford motivation, negative cycles (#adsa)
 - [[adsa-explicit-implicit-graphs]] — Pre-built adjacency structure vs lazily-generated neighbors; state-space search (puzzles, chess), visited-by-value tracking (#adsa)
 - [[adsa-adjacency-matrix]] — V×V grid representation: O(1) edge lookup, O(V²) space, symmetric (undirected) vs asymmetric (directed), Floyd-Warshall use case (#adsa)
+- [[adsa-adjacency-list]] — Per-vertex neighbor list representation: O(V+E) space, weighted (neighbor,weight) pairs vs unweighted, sparse-graph use cases (#adsa)
 
 ---
 
