@@ -577,3 +577,62 @@ Append-only record of all wiki operations.
 - `agentic-langchain.md` — LangChain & LangGraph overview: chains, agents, tools, memory, state machine orchestration, vs rolling your own
 
 **Index updated**: yes
+
+## 2026-06-16 — Indegree/Outdegree (ADSA graphs)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created**:
+- `adsa-indegree-outdegree.md` — Definition, cost of computing from adjacency list vs matrix, handshake identity, Kahn's algorithm tie-in
+
+**Pages updated**:
+- `adsa-graphs.md` — Added to topic map and roadmap
+
+**Index updated**: yes
+
+## 2026-06-16 — BFS/DFS on graphs (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created**:
+- `adsa-bfs.md` — Definition, illustration (dry run), advantages, disadvantages, example, use cases
+- `adsa-dfs.md` — Definition, illustration (dry run), advantages, disadvantages, example, use cases
+
+**Pages updated**:
+- `adsa-graphs.md` — Added both to topic map; roadmap step 4 now links to both instead of "_next topic_"
+
+**Index updated**: yes
+
+## 2026-06-16 — Topological Sort (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created**:
+- `adsa-toposort.md` — Definition (DAG-only ordering), Kahn's algorithm (BFS, in-degree based) with dry run, DFS-based method (finish-time stack reversed) with dry run, comparison table, use cases
+
+**Pages updated**:
+- `adsa-graphs.md` — Added to topic map and roadmap (step 4a)
+- `adsa-dag.md` — Linked to dedicated toposort page from its existing Kahn's algorithm section
+
+**Index updated**: yes
+
+## 2026-06-16 — Flood Fill (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created**:
+- `adsa-flood-fill.md` — Definition (implicit grid graph), grid dry run, advantages, disadvantages, example, use cases
+
+**Pages updated**:
+- `adsa-bfs.md` — Added flood fill as a use case
+- `adsa-dfs.md` — Added flood fill as a use case
+
+**Index updated**: yes
