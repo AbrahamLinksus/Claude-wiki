@@ -148,10 +148,11 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-b-plus-trees]] — B+ tree overview: all data in leaves, internal nodes as pure index, linked leaf layer, range query O(log n + k), vs B-tree comparison (#adsa)
 - [[adsa-b-plus-tree-operations]] — Search, leaf split (copy-up) vs internal split (push-up), insert dry run (10 keys, shows internal split), delete dry run (merge + stale separator), range query algorithm (#adsa)
 - [[trees-compiler-optimization]] — How ADSA tree structures map to compiler internals: AST traversal, symbol tables (RBT), IR arena layout, B+ tree query optimizers, dominator trees (#adsa)
-- [[adsa-graphs]] — Graph overview: vertices/edges, tree as a special case, topic map, roadmap (#adsa)
-- [[adsa-directed-undirected-graphs]] — Edge direction: one-way (directed, e.g. Twitter follow) vs two-way (undirected, e.g. Facebook friendship) (#adsa)
-- [[adsa-cyclic-acyclic-graphs]] — Cycles vs no cycles; DAGs and their real-world uses (scheduling, builds, git); combined classification table (#adsa)
-- [[adsa-weighted-unweighted-graphs]] — Edge cost/value vs equal edges; hop count vs Dijkstra/Bellman-Ford; negative weights and negative cycles (#adsa)
+- [[adsa-graphs]] — Graph overview: definition, advantages/disadvantages, adjacency list/matrix representation, creation pseudocode, use cases, topic map (#adsa)
+- [[adsa-directed-undirected-graphs]] — One-way (directed) vs two-way (undirected) edges: adv/disadv, representation, pseudocode, use cases, examples (#adsa)
+- [[adsa-cyclic-acyclic-graphs]] — Cycles vs no cycles: adv/disadv, DFS-based cycle detection pseudocode, combined classification table (#adsa)
+- [[adsa-dag]] — Directed Acyclic Graph dedicated page: topological sort (Kahn's algorithm), cycle-prevention insert, build/scheduling/git use cases (#adsa)
+- [[adsa-weighted-unweighted-graphs]] — Edge cost vs equal edges: adv/disadv, representation, pseudocode, Dijkstra/Bellman-Ford motivation, negative cycles (#adsa)
 
 ---
 
