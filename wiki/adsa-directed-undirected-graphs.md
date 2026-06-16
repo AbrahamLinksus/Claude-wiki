@@ -9,35 +9,71 @@
 
 ---
 
-## Directed Graphs
+## Definition
 
-An edge A→B is one-way: it does not imply B→A. The relationship only holds in the direction the arrow points.
+**Directed graph**: an edge A→B is one-way — it does not imply B→A. The relationship only holds in the direction the arrow points.
 
 ```
 A → B → C
 ```
 
-Real-world example: a Twitter/X follow. If A follows B, that doesn't mean B follows A.
-
-## Undirected Graphs
-
-An edge A-B goes both ways: A-B implies B-A. There's no arrow, just a connection.
+**Undirected graph**: an edge A-B goes both ways — A-B implies B-A. There's no arrow, just a connection.
 
 ```
 A - B - C
 ```
 
-Real-world example: a Facebook friendship — if A is friends with B, B is friends with A by definition.
+## Advantages
 
-## Why It Matters
+**Directed:**
+- Models asymmetric relationships naturally (one-way streets, follows, hyperlinks).
+- Enables algorithms that need direction to be meaningful: topological sort, strongly connected components, dependency resolution.
 
-The direction of edges changes which algorithms and traversals are valid:
-- Traversal order in a directed graph depends on which way edges point — you can't walk backward along a directed edge.
-- Many algorithms (topological sort, strongly connected components) only make sense on directed graphs.
-- An undirected graph can be modeled as a directed graph by storing each edge twice (A→B and B→A) — this is a common implementation trick for adjacency lists.
+**Undirected:**
+- Simpler model when the relationship is inherently mutual (friendship, physical connection).
+- Symmetric adjacency simplifies algorithms like connected components and minimum spanning trees.
+
+## Disadvantages
+
+**Directed:**
+- Traversal is more constrained — you can't always walk backward along an edge.
+- Requires separate in-degree/out-degree bookkeeping for some algorithms.
+
+**Undirected:**
+- Cannot model one-way relationships at all.
+- If forced into a directed representation, each edge must be stored twice (A→B and B→A), wasting space.
+
+## Representation
+
+| | Adjacency List | Adjacency Matrix |
+|---|---|---|
+| **Directed** | `graph[u]` holds only outgoing edges to `v` | Not necessarily symmetric: `matrix[i][j] ≠ matrix[j][i]` in general |
+| **Undirected** | Edge u-v stored in both `graph[u]` and `graph[v]` | Always symmetric: `matrix[i][j] == matrix[j][i]` |
+
+## Pseudocode for Creation
+
+```
+function addDirectedEdge(graph, u, v):
+    graph[u].append(v)
+
+function addUndirectedEdge(graph, u, v):
+    graph[u].append(v)
+    graph[v].append(u)
+```
+
+## Use Cases
+
+- **Directed**: task scheduling, web link graphs, "follows" graphs, citation networks
+- **Undirected**: friendship networks, two-way road networks, circuit diagrams, collaboration networks
+
+## Examples
+
+- Twitter/X follow graph — directed (following someone doesn't mean they follow back)
+- Facebook friend graph — undirected (friendship is mutual by definition)
+- One-way street vs two-way street in a city map
 
 ## Where This Connects
 
-Combined with [[adsa-cyclic-acyclic-graphs]], direction determines important special cases — e.g. a **DAG** (Directed Acyclic Graph) requires both "directed" and "acyclic" together.
+Combined with [[adsa-cyclic-acyclic-graphs]], direction determines important special cases — e.g. a [[adsa-dag]] (Directed Acyclic Graph) requires both "directed" and "acyclic" together.
 
 #adsa
