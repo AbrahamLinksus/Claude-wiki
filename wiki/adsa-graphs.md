@@ -15,6 +15,7 @@
 - [[adsa-cyclic-acyclic-graphs]] — Whether paths can loop back; DAGs and their uses
 - [[adsa-dag]] — Directed Acyclic Graphs as their own dedicated topic: topological sort, dependency modeling
 - [[adsa-weighted-unweighted-graphs]] — Whether edges carry a cost/value
+- [[adsa-explicit-implicit-graphs]] — Whether the graph is fully pre-built or generated on the fly during search
 
 ---
 
