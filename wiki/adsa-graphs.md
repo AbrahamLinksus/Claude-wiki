@@ -21,6 +21,7 @@
 - [[adsa-indegree-outdegree]] — Edges in vs edges out per vertex; directed-only concept; cost of computing from each representation
 - [[adsa-bfs]] — Level-by-level traversal via queue; shortest path in unweighted graphs; needs a visited set on cycles
 - [[adsa-dfs]] — Depth-first traversal via stack/recursion; low memory, no shortest-path guarantee; needs a visited set on cycles
+- [[adsa-toposort]] — Linear ordering of a DAG's vertices respecting edge direction; Kahn's (BFS) vs DFS-based methods
 
 ---
 
