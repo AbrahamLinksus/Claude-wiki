@@ -81,6 +81,8 @@ function topologicalSort(graph):
 
 If the resulting `order` doesn't contain every vertex, the graph had a cycle — this doubles as a cycle-detection method.
 
+See [[adsa-toposort]] for the dedicated page covering this Kahn's algorithm dry run plus the alternative DFS-based method.
+
 ## Use Cases
 
 - Build systems (Make, Bazel) — build targets and their dependencies
