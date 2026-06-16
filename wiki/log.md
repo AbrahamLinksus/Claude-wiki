@@ -4,14 +4,19 @@ Append-only record of all wiki operations.
 
 ---
 
-## 2026-06-16 — Graphs page added
+## 2026-06-16 — Graphs split into sub-pages; weighted/unweighted added
 
 **Source**: Session-built (no raw file)
 
 **Tag**: #adsa
 
-**Pages created** (1):
-- `adsa-graphs.md` — Summary page: what a graph is (vertices/edges, connections carry meaning), tree as a special case of a graph, classification table (cyclic/acyclic × directed/undirected), DAG explanation, weighted/unweighted, real-world examples (roads, social networks, web, git), roadmap to representation/traversal/shortest path/MST/topological sort
+**Pages updated** (1):
+- `adsa-graphs.md` — Converted to a summary/topic-map page (binary-trees pattern): what a graph is, tree as a special case, real-world examples, links to the 3 new sub-pages
+
+**Pages created** (3):
+- `adsa-directed-undirected-graphs.md` — One-way vs two-way edges, Twitter follow vs Facebook friendship examples, why direction matters for traversal/topological sort/SCCs
+- `adsa-cyclic-acyclic-graphs.md` — Directed vs undirected cycle diagrams, DAG definition and 4 real-world uses (scheduling/build systems/git/spreadsheets), combined cyclic×directed classification table
+- `adsa-weighted-unweighted-graphs.md` — Hop count vs total edge weight, Dijkstra/Bellman-Ford motivation, negative weights and negative-weight cycles, real-world examples table
 
 **Index updated**: yes
 
