@@ -9,42 +9,76 @@
 
 ---
 
-## Unweighted Graphs
+## Definition
 
-Every edge is treated identically — the only thing that matters is whether a connection exists.
+**Unweighted graph**: every edge is treated identically — the only thing that matters is whether a connection exists.
 
 ```
 A - B - C
 ```
 
-"Distance" between vertices here just means **number of edges** (hop count). This is what plain BFS computes: shortest path in an unweighted graph = fewest edges.
-
-## Weighted Graphs
-
-Each edge carries a numeric value — typically representing cost, distance, time, or capacity.
+**Weighted graph**: each edge carries a numeric value — typically cost, distance, time, or capacity.
 
 ```
 A --5-- B --2-- C
 ```
 
-Here, the path A→B→C costs 5+2=7, even though it's still only 2 edges. "Shortest path" now means **minimum total weight**, not fewest hops — BFS alone no longer guarantees correctness; this is where algorithms like **Dijkstra's** and **Bellman-Ford** come in.
+## Advantages
 
-## Real-World Examples
+**Weighted:**
+- Models real-world costs precisely (distance, time, latency, capacity).
+- Enables optimization algorithms that find the cheapest, not just the shortest, path.
 
-| Weighted | Unweighted |
-|---|---|
-| Road networks — weight = distance/time | Social network "friend" graph — connection either exists or doesn't |
-| Flight routes — weight = cost or duration | Web link graph (basic) — a link exists or doesn't |
-| Network routing — weight = latency/bandwidth | Maze solving — each cell move costs the same |
+**Unweighted:**
+- Simple — plain BFS gives the shortest path (fewest hops) in O(V + E).
+- Less storage — no need to store a value alongside each edge.
 
-## Negative Weights
+## Disadvantages
 
-Weights can be negative (e.g. modeling a discount or gain), but this introduces a subtlety:
-- **Dijkstra's algorithm** assumes non-negative weights and breaks with negative ones.
-- **Bellman-Ford** handles negative weights and can detect negative-weight cycles (a cycle whose total weight is negative — meaning there's no true "shortest" path, since you could loop forever to decrease cost).
+**Weighted:**
+- More storage — each edge needs a value, not just an existence flag.
+- Shortest-path algorithms (Dijkstra's, Bellman-Ford) are more expensive than plain BFS.
+
+**Unweighted:**
+- Can't distinguish a "cheap" connection from an "expensive" one — loses real-world fidelity when costs actually differ.
+
+## Representation
+
+| | Adjacency List | Adjacency Matrix |
+|---|---|---|
+| **Unweighted** | `graph[u] = [v1, v2, ...]` | `matrix[i][j] = 1` if edge exists, else 0 |
+| **Weighted** | `graph[u] = [(v1, w1), (v2, w2), ...]` | `matrix[i][j] = weight`, else ∞ (or 0) |
+
+## Pseudocode for Creation
+
+```
+function addWeightedEdge(graph, u, v, weight, directed = False):
+    graph[u].append((v, weight))
+    if not directed:
+        graph[v].append((u, weight))
+```
+
+## Shortest Path: Why Weight Changes the Algorithm
+
+In an unweighted graph, "distance" = number of edges (hop count) — BFS computes this directly.
+
+In a weighted graph, "shortest path" means **minimum total weight**, not fewest hops. The path A→B→C with weights 5 and 2 costs 7, even though it's only 2 edges — BFS alone no longer guarantees correctness. This is where **Dijkstra's algorithm** (non-negative weights) and **Bellman-Ford** (handles negative weights, detects negative cycles) come in.
+
+A **negative-weight cycle** is a cycle whose total weight is negative — meaning there's no true "shortest" path, since looping through it repeatedly keeps decreasing the cost. Dijkstra's assumes non-negative weights and breaks in their presence; Bellman-Ford can detect this case explicitly.
+
+## Use Cases
+
+- **Weighted**: GPS navigation (distance/time), network routing (latency/bandwidth), flight booking (cost), task scheduling (duration)
+- **Unweighted**: friend-of-friend search, maze solving, web crawler reachability, simple connectivity checks
+
+## Examples
+
+- Google Maps route — weighted by distance/traffic
+- "Degrees of separation" on a social network (e.g. Six Degrees of Kevin Bacon) — unweighted, hop-count based
+- A flight network where edges are weighted by ticket price
 
 ## Where This Connects
 
-Weight is independent of [[adsa-directed-undirected-graphs]] and [[adsa-cyclic-acyclic-graphs]] — any combination is possible (e.g. a weighted DAG is common in scheduling where edges represent task duration).
+Weight is independent of [[adsa-directed-undirected-graphs]] and [[adsa-cyclic-acyclic-graphs]] — any combination is possible. A weighted [[adsa-dag]] is common in scheduling, where edges represent task duration.
 
 #adsa
