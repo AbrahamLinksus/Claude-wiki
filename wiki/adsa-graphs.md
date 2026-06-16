@@ -18,6 +18,7 @@
 - [[adsa-explicit-implicit-graphs]] — Whether the graph is fully pre-built or generated on the fly during search
 - [[adsa-adjacency-matrix]] — Representing a graph as a V×V grid; O(1) edge lookup vs O(V²) space
 - [[adsa-adjacency-list]] — Representing a graph as per-vertex neighbor lists; O(V+E) space, weighted vs unweighted forms
+- [[adsa-indegree-outdegree]] — Edges in vs edges out per vertex; directed-only concept; cost of computing from each representation
 
 ---
 
