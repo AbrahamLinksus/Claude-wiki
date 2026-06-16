@@ -29,7 +29,7 @@ Graph: A-B, A-C, B-C (undirected)
 
 - **Undirected** (see [[adsa-directed-undirected-graphs]]) → matrix is symmetric: `matrix[i][j] == matrix[j][i]`.
 - **Directed** → not necessarily symmetric; row i = outgoing edges from i, column i = incoming edges to i.
-- **Self-loops** appear on the diagonal (`matrix[i][i]`).
+- **Self-loops** (see [[adsa-cyclic-acyclic-graphs]]) appear on the diagonal: `matrix[i][i] = 1` (or a weight). In an undirected graph this is sometimes stored as `2` instead, to reflect that the self-loop contributes 2 to the vertex's degree.
 - Edge existence check: **O(1)** — direct index lookup.
 - Iterating all neighbors of a vertex: **O(V)** — must scan the entire row, even if the vertex has only one neighbor.
 - Space: always **O(V²)**, regardless of actual edge count.
