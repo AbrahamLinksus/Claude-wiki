@@ -4,6 +4,19 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-16 — Graphs page added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-graphs.md` — Summary page: what a graph is (vertices/edges, connections carry meaning), tree as a special case of a graph, classification table (cyclic/acyclic × directed/undirected), DAG explanation, weighted/unweighted, real-world examples (roads, social networks, web, git), roadmap to representation/traversal/shortest path/MST/topological sort
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-15 — Trees → Compiler Optimization cross-reference page added
 
 **Source**: Q&A discussion
