@@ -153,6 +153,7 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-cyclic-acyclic-graphs]] — Cycles vs no cycles: adv/disadv, DFS-based cycle detection pseudocode, combined classification table (#adsa)
 - [[adsa-dag]] — Directed Acyclic Graph dedicated page: topological sort (Kahn's algorithm), cycle-prevention insert, build/scheduling/git use cases (#adsa)
 - [[adsa-weighted-unweighted-graphs]] — Edge cost vs equal edges: adv/disadv, representation, pseudocode, Dijkstra/Bellman-Ford motivation, negative cycles (#adsa)
+- [[adsa-explicit-implicit-graphs]] — Pre-built adjacency structure vs lazily-generated neighbors; state-space search (puzzles, chess), visited-by-value tracking (#adsa)
 
 ---
 
