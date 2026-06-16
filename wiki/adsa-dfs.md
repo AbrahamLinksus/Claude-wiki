@@ -85,5 +85,6 @@ Solving a maze: DFS commits to one corridor, following it to a dead end before b
 - Maze/puzzle solving, backtracking algorithms (N-Queens, Sudoku)
 - Finding connected components / strongly connected components (Tarjan's, Kosaraju's)
 - Path existence checks where any valid path (not necessarily shortest) is acceptable
+- Flood fill on grids ([[adsa-flood-fill]]) — recursive DFS version is simplest but risks stack overflow on large regions
 
 #adsa
