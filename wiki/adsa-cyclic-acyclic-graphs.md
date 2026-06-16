@@ -28,6 +28,14 @@ A graph is **acyclic** if no such loop exists — every path eventually dead-end
 - **Directed + acyclic** = [[adsa-dag]] (Directed Acyclic Graph)
 - **Undirected + acyclic + connected** = a tree (see [[adsa-binary-trees]] for the special case where every node has at most 2 children)
 
+### Self-Loops: The Smallest Cycle
+
+A **self-loop** is an edge from a vertex to itself (A→A) — a path of length 1 that returns to its starting point. This makes it the smallest possible cycle: any graph containing a self-loop is automatically cyclic.
+
+- A graph with self-loops (or repeated edges between the same pair) is technically a **multigraph/pseudograph**; a strict "simple graph" disallows both.
+- In an undirected graph, a self-loop usually counts as **2** toward that vertex's degree (it touches the vertex on both ends).
+- During traversal, a self-loop means a vertex is its own neighbor (`graph[A]` contains `A`) — visited-tracking must catch this or BFS/DFS will immediately try to re-enqueue/re-visit the same vertex.
+
 ## Advantages
 
 **Cyclic:**
