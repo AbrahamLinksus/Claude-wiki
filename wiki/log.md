@@ -4,6 +4,22 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-16 — Adjacency Matrix page added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-adjacency-matrix.md` — Definition (V×V grid, weighted vs unweighted cell values), key properties (symmetric for undirected, diagonal = self-loops, O(1) lookup, O(V) neighbor scan, O(V²) space), advantages/disadvantages, creation pseudocode, use cases (dense graphs, Floyd-Warshall, complete graphs), examples
+
+**Pages updated** (1):
+- `adsa-graphs.md` — Topic map now links `adsa-adjacency-matrix`
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-16 — Explicit vs Implicit Graphs page added
 
 **Source**: Session-built (no raw file)
