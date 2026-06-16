@@ -19,6 +19,8 @@
 - [[adsa-adjacency-matrix]] — Representing a graph as a V×V grid; O(1) edge lookup vs O(V²) space
 - [[adsa-adjacency-list]] — Representing a graph as per-vertex neighbor lists; O(V+E) space, weighted vs unweighted forms
 - [[adsa-indegree-outdegree]] — Edges in vs edges out per vertex; directed-only concept; cost of computing from each representation
+- [[adsa-bfs]] — Level-by-level traversal via queue; shortest path in unweighted graphs; needs a visited set on cycles
+- [[adsa-dfs]] — Depth-first traversal via stack/recursion; low memory, no shortest-path guarantee; needs a visited set on cycles
 
 ---
 
