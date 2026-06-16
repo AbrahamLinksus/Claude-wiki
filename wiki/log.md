@@ -4,6 +4,22 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-16 — Adjacency List page added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-adjacency-list.md` — Definition covering both unweighted (`graph[u] = [v1, v2]`) and weighted (`graph[u] = [(v1, w1), ...]`) forms, directed vs undirected storage convention, key properties (O(V+E) space, O(degree) neighbor iteration), advantages/disadvantages vs matrix, creation pseudocode for both forms, use cases (sparse graphs, BFS/DFS, Dijkstra/Bellman-Ford), examples
+
+**Pages updated** (1):
+- `adsa-graphs.md` — Topic map now links `adsa-adjacency-list`
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-16 — Self-loops folded into existing pages
 
 **Source**: Q&A discussion
