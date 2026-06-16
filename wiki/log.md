@@ -4,6 +4,20 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-16 — Self-loops folded into existing pages
+
+**Source**: Q&A discussion
+
+**Tag**: #adsa
+
+**Pages updated** (2):
+- `adsa-cyclic-acyclic-graphs.md` — Added "Self-Loops: The Smallest Cycle" subsection under Definition: self-loop as smallest possible cycle, multigraph/pseudograph distinction from simple graphs, degree counting (+2 in undirected), traversal/visited-tracking implication
+- `adsa-adjacency-matrix.md` — Expanded the self-loops bullet in Key Properties to note the degree-2 convention for undirected self-loops, linked to `adsa-cyclic-acyclic-graphs`
+
+**Index updated**: no (no new pages)
+
+---
+
 ## 2026-06-16 — Adjacency Matrix page added
 
 **Source**: Session-built (no raw file)
