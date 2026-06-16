@@ -4,6 +4,22 @@ Append-only record of all wiki operations.
 
 ---
 
+## 2026-06-16 — Explicit vs Implicit Graphs page added
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-explicit-implicit-graphs.md` — Definition (pre-stored adjacency structure vs lazily-generated neighbor function), advantages/disadvantages, representation comparison table, explicit lookup vs implicit generator pseudocode, generic search pseudocode showing lazy generation + visited-by-value tracking, use cases (puzzle solving, game tree search, AI state-space planning), examples (road map vs 8-puzzle vs chess engine)
+
+**Pages updated** (1):
+- `adsa-graphs.md` — Topic map now links `adsa-explicit-implicit-graphs`
+
+**Index updated**: yes
+
+---
+
 ## 2026-06-16 — DAG page added; all graph pages expanded with full template
 
 **Source**: Session-built (no raw file)
