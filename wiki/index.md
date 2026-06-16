@@ -159,6 +159,7 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-indegree-outdegree]] — Edges in vs edges out per vertex (directed-only); cost from adjacency list/matrix; handshake identity; Kahn's algorithm tie-in (#adsa)
 - [[adsa-bfs]] — Graph BFS: queue-based level-order traversal, visited set for cycles, shortest path in unweighted graphs, web crawler/social network use cases (#adsa)
 - [[adsa-dfs]] — Graph DFS: stack/recursion-based depth traversal, visited set for cycles, maze/backtracking/topological sort/cycle detection use cases (#adsa)
+- [[adsa-flood-fill]] — BFS/DFS on an implicit grid graph; paint bucket/Minesweeper/connected-component use cases; grid dry run (#adsa)
 
 ---
 
