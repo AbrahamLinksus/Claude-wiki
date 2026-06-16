@@ -9,6 +9,14 @@
 
 ---
 
+## Topic Map
+
+- [[adsa-directed-undirected-graphs]] — Edge direction: one-way (directed) vs two-way (undirected)
+- [[adsa-cyclic-acyclic-graphs]] — Whether paths can loop back; DAGs and their uses
+- [[adsa-weighted-unweighted-graphs]] — Whether edges carry a cost/value
+
+---
+
 ## What is a Graph?
 
 A graph is **a group of elements where their connections matter**. The vertices alone are just data — the structure and meaning come from how they're connected via edges.
@@ -20,24 +28,6 @@ This is the key shift from trees: in a tree, structure is implied by parent/chil
 
 A tree is actually a special case of a graph: a graph that is connected, acyclic, and undirected.
 
-## Classification
-
-Graphs are classified along two independent axes:
-
-| | **Directed** | **Undirected** |
-|---|---|---|
-| **Cyclic** | Cycle follows edge direction, e.g. A→B→C→A | Any loop back to a node via edges, e.g. A-B-C-A |
-| **Acyclic** | DAG (Directed Acyclic Graph) — e.g. task dependencies, git commit history | A tree, if connected |
-
-- **Directed edge**: has a direction — A→B does not imply B→A (e.g. a Twitter follow).
-- **Undirected edge**: goes both ways — A-B implies B-A (e.g. a Facebook friendship).
-- **Cyclic**: at least one path loops back to a vertex it already visited.
-- **Acyclic**: no such path exists.
-
-A **DAG** is especially important in practice: it's used for scheduling, build systems, and version history — git commits form a DAG.
-
-A **weighted** graph additionally assigns a cost/value to each edge (e.g. distance, time); an **unweighted** graph treats all edges as equal.
-
 ## Real-World Examples
 
 - Road networks — cities = vertices, roads = edges (often weighted by distance)
@@ -47,11 +37,13 @@ A **weighted** graph additionally assigns a cost/value to each edge (e.g. distan
 
 ## Roadmap to Mastery
 
-1. Classification (cyclic/acyclic, directed/undirected, weighted/unweighted) — done above
-2. Representation (adjacency list vs adjacency matrix) — _next topic_
-3. Traversal (BFS/DFS on graphs vs trees) — _next topic_
-4. Shortest path algorithms (Dijkstra, Bellman-Ford) — _next topic_
-5. Minimum spanning trees (Prim's, Kruskal's) — _next topic_
-6. Topological sort (for DAGs) — _next topic_
+1. Edge direction → [[adsa-directed-undirected-graphs]]
+2. Cycles and DAGs → [[adsa-cyclic-acyclic-graphs]]
+3. Edge weights → [[adsa-weighted-unweighted-graphs]]
+4. Representation (adjacency list vs adjacency matrix) — _next topic_
+5. Traversal (BFS/DFS on graphs vs trees) — _next topic_
+6. Shortest path algorithms (Dijkstra, Bellman-Ford) — _next topic_
+7. Minimum spanning trees (Prim's, Kruskal's) — _next topic_
+8. Topological sort (for DAGs) — _next topic_
 
 #adsa
