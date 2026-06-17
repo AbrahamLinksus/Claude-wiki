@@ -636,3 +636,14 @@ Append-only record of all wiki operations.
 - `adsa-dfs.md` — Added flood fill as a use case
 
 **Index updated**: yes
+
+## 2026-06-17 — Implicit Graphs: Worked Example (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages updated**:
+- `adsa-explicit-implicit-graphs.md` — Added worked example: start=2, target=9, limit=10, ops {x-1, x+1, x*2}; full BFS dry run reaching target in 3 steps (2→4→8→9), linked to `adsa-bfs`
+
+**Index updated**: no change needed (existing page entry already covers this)
