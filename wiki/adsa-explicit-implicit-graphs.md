@@ -92,4 +92,24 @@ function search(start):
 
 This distinction matters most once we get to [[adsa-graphs]] traversal (BFS/DFS) — the algorithms are the same shape, but implicit graphs need lazy neighbor generation plus visited-tracking by value instead of by index. It's also the foundation for state-space search in AI planning and game-playing agents.
 
+## Worked Example: Reach Target via Operations
+
+**Problem**: start = 2, target = 9, limit = 10. Each state `x` has up to 3 neighbors, generated on demand: `x-1`, `x+1`, `x*2`. A neighbor is only valid if `0 ≤ x ≤ limit`. Find the minimum number of operations to reach the target.
+
+This is a textbook implicit graph: no graph is ever stored — `neighbors(x)` is computed from the three ops each time a state is popped, and the valid range (`0` to `limit`) prunes which generated neighbors actually count as vertices. [[adsa-bfs]] (level-order, shortest path in unweighted graphs) is the natural algorithm here since all edges have equal weight (each op = 1 step).
+
+**BFS dry run** (visited set tracks values already seen, by value not index — see Representation table above):
+
+```
+Level 0: {2}
+Level 1: 2-1=1, 2+1=3, 2*2=4        → {1, 3, 4}
+Level 2: from 1: 0, 2(v), 2(v)       → 0
+         from 3: 2(v), 4(v), 6       → 6
+         from 4: 3(v), 5, 8          → 5, 8
+                                      → {0, 6, 5, 8}
+Level 3: from 8: 7, 9 ✅ target, 16(>limit, invalid)
+```
+
+**Answer**: 3 operations — path `2 → 4 → 8 → 9` (×2, ×2, +1).
+
 #adsa
