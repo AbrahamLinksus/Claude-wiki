@@ -21,4 +21,22 @@ An MST applies to a graph that is:
 
 A common misconception: the graph does **not** need to contain a cycle. If the graph is already a tree (acyclic), it trivially is its own MST. Cycles aren't a precondition — they just mean multiple spanning trees exist to choose between, which is what makes the "minimum" part non-trivial. See [[adsa-cyclic-acyclic-graphs]].
 
+## Approaches
+
+**Brute force**: enumerate every possible spanning tree of the graph, compute each one's total edge weight, and keep the minimum. Not every *path* — a spanning tree connects all vertices with no cycles, which is a distinct object from a path (path-finding is the domain of Dijkstra/Bellman-Ford, a different problem).
+
+**Greedy — Kruskal's Algorithm**: sort all edges by weight ascending. Walk the sorted list and add each edge to the MST as long as it does not form a cycle with edges already chosen. Stop once V−1 edges have been added (V = number of vertices).
+
+```
+function kruskalMST(graph):
+    edges = sortByWeightAscending(graph.edges)
+    mst = []
+    for (u, v, weight) in edges:
+        if not formsCycle(mst, u, v):
+            mst.append((u, v, weight))
+        if len(mst) == V - 1:
+            break
+    return mst
+```
+
 #adsa
