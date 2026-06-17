@@ -161,7 +161,8 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-dfs]] — Graph DFS: stack/recursion-based depth traversal, visited set for cycles, maze/backtracking/topological sort/cycle detection use cases (#adsa)
 - [[adsa-flood-fill]] — BFS/DFS on an implicit grid graph; paint bucket/Minesweeper/connected-component use cases; grid dry run (#adsa)
 - [[adsa-toposort]] — Topological sort: Kahn's algorithm (BFS) vs DFS finish-time method, dry runs, comparison table (#adsa)
+- [[adsa-mst]] — Minimum Spanning Tree: requirements (connected, undirected, weighted), cycles not required (#adsa)
 
 ---
 
-**Last updated**: 2026-06-16
+**Last updated**: 2026-06-17
