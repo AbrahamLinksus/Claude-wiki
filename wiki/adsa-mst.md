@@ -39,4 +39,58 @@ function kruskalMST(graph):
     return mst
 ```
 
+### Cycle Detection — Union-Find (Disjoint Set Union)
+
+Kruskal's `formsCycle` check is implemented with Union-Find:
+
+- Each vertex starts in its own set.
+- `find(x)` returns the representative (root) of x's set.
+- `union(u,v)` merges the two sets.
+- Adding edge (u,v) creates a cycle **iff** `find(u) == find(v)` (they're already connected some other way).
+
+```
+function find(parent, x):
+    while parent[x] != x:
+        x = parent[x]
+    return x
+
+function union(parent, u, v):
+    ru, rv = find(parent, u), find(parent, v)
+    if ru == rv:
+        return False   # would form a cycle
+    parent[ru] = rv
+    return True
+```
+
+With path compression + union by rank, `find`/`union` are nearly O(1) amortized, making Kruskal's overall **O(E log E)** (dominated by sorting the edges).
+
+**Greedy — Prim's Algorithm**: vertex-centric (vs Kruskal's edge-centric). Grows one tree from a start vertex by always picking the cheapest edge crossing from the visited set to the unvisited set.
+
+```
+function primMST(graph, start):
+    visited = {start}
+    mst = []
+    pq = MinHeap of (weight, u, v) for all edges from start
+    while len(visited) < V:
+        weight, u, v = pq.popMin()
+        if v in visited: continue
+        visited.add(v)
+        mst.append((u, v, weight))
+        for each edge (v, w, wt) where w not in visited:
+            pq.push((wt, v, w))
+    return mst
+```
+
+Complexity with a binary heap: **O(E log V)**.
+
+### Kruskal's vs Prim's
+
+| | Kruskal's | Prim's |
+|---|---|---|
+| Strategy | Sort all edges, pick globally smallest safe edge | Grow one tree, pick locally smallest crossing edge |
+| Best for | Sparse graphs (E close to V) | Dense graphs (E close to V²) |
+| Data structure | Union-Find | Min-heap / priority queue |
+| Complexity | O(E log E) | O(E log V) |
+| Needs connected start? | No (works component-wise → forest) | Yes (starts from one vertex) |
+
 #adsa
