@@ -1,4 +1,3 @@
----
 # Minimum Spanning Tree (MST)
 
 **Summary**: An MST is the subset of edges from a connected, undirected, weighted graph that connects all vertices with the minimum possible total edge weight.
@@ -25,65 +24,20 @@ A common misconception: the graph does **not** need to contain a cycle. If the g
 
 **Brute force**: enumerate every possible spanning tree of the graph, compute each one's total edge weight, and keep the minimum. Not every *path* — a spanning tree connects all vertices with no cycles, which is a distinct object from a path (path-finding is the domain of Dijkstra/Bellman-Ford, a different problem).
 
-**Greedy — Kruskal's Algorithm**: sort all edges by weight ascending. Walk the sorted list and add each edge to the MST as long as it does not form a cycle with edges already chosen. Stop once V−1 edges have been added (V = number of vertices).
+**Greedy**: both standard algorithms below make a series of locally-best choices (cheapest edge available at each step) and still land on a *globally* optimal answer. This works for MST specifically because the set of spanning trees forms a matroid — each algorithm's safe-edge rule (Cut Property for Prim's, Cycle Property for Kruskal's) is a proven guarantee, not a heuristic. Unlike greedy on problems like knapsack or general TSP, a locally cheapest choice here never locks out the global optimum.
 
-```
-function kruskalMST(graph):
-    edges = sortByWeightAscending(graph.edges)
-    mst = []
-    for (u, v, weight) in edges:
-        if not formsCycle(mst, u, v):
-            mst.append((u, v, weight))
-        if len(mst) == V - 1:
-            break
-    return mst
-```
+## Optimality Guarantee
 
-### Cycle Detection — Union-Find (Disjoint Set Union)
+Both algorithms always return a spanning tree of **minimum total weight** — guaranteed, on any connected weighted undirected graph. The only caveat: if edge weights aren't all distinct, multiple different edge sets can tie for that minimum weight (multiple valid MSTs). Each algorithm still finds *one* of them, and its total weight is always optimal.
 
-Kruskal's `formsCycle` check is implemented with Union-Find:
+## Topic Map
 
-- Each vertex starts in its own set.
-- `find(x)` returns the representative (root) of x's set.
-- `union(u,v)` merges the two sets.
-- Adding edge (u,v) creates a cycle **iff** `find(u) == find(v)` (they're already connected some other way).
+| Page | What it covers |
+|------|----------------|
+| [[adsa-kruskals-algorithm]] | Edge-centric, sorts all edges, Union-Find cycle detection, Cycle Property |
+| [[adsa-prims-algorithm]] | Vertex-centric, grows one tree, min-heap frontier, Cut Property |
 
-```
-function find(parent, x):
-    while parent[x] != x:
-        x = parent[x]
-    return x
-
-function union(parent, u, v):
-    ru, rv = find(parent, u), find(parent, v)
-    if ru == rv:
-        return False   # would form a cycle
-    parent[ru] = rv
-    return True
-```
-
-With path compression + union by rank, `find`/`union` are nearly O(1) amortized, making Kruskal's overall **O(E log E)** (dominated by sorting the edges).
-
-**Greedy — Prim's Algorithm**: vertex-centric (vs Kruskal's edge-centric). Grows one tree from a start vertex by always picking the cheapest edge crossing from the visited set to the unvisited set.
-
-```
-function primMST(graph, start):
-    visited = {start}
-    mst = []
-    pq = MinHeap of (weight, u, v) for all edges from start
-    while len(visited) < V:
-        weight, u, v = pq.popMin()
-        if v in visited: continue
-        visited.add(v)
-        mst.append((u, v, weight))
-        for each edge (v, w, wt) where w not in visited:
-            pq.push((wt, v, w))
-    return mst
-```
-
-Complexity with a binary heap: **O(E log V)**.
-
-### Kruskal's vs Prim's
+## Kruskal's vs Prim's
 
 | | Kruskal's | Prim's |
 |---|---|---|
