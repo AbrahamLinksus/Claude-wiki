@@ -680,3 +680,18 @@ Append-only record of all wiki operations.
 - `adsa-mst.md` — Added Union-Find (Disjoint Set Union) cycle detection for Kruskal's `formsCycle` check with find/union pseudocode and path-compression complexity note; added Prim's algorithm (vertex-centric, min-heap, O(E log V)) pseudocode; added Kruskal's vs Prim's comparison table
 
 **Index updated**: yes — updated `adsa-mst` description, bumped last-updated date to 2026-06-18
+
+## 2026-06-18 — MST split into separate algorithm pages + Cut/Cycle Property proofs (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (2):
+- `adsa-kruskals-algorithm.md` — Kruskal's pseudocode, Union-Find cycle detection (find/union pseudocode, path compression), Cycle Property correctness argument, O(E log E)
+- `adsa-prims-algorithm.md` — Prim's pseudocode, Cut Property correctness proof (swap argument), optimality guarantee with tie caveat, O(E log V)
+
+**Pages updated** (1):
+- `adsa-mst.md` — Converted to overview/topic-map page (AVL-trees pattern): Requirements, Approaches (brute force + why greedy works via matroid structure), Optimality Guarantee, Topic Map linking to the two new pages, Kruskal's vs Prim's comparison table; algorithm-specific pseudocode/proofs moved out to their own pages
+
+**Index updated**: yes — added `adsa-kruskals-algorithm` and `adsa-prims-algorithm` entries, updated `adsa-mst` description
