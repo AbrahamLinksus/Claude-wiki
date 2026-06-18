@@ -647,3 +647,36 @@ Append-only record of all wiki operations.
 - `adsa-explicit-implicit-graphs.md` — Added worked example: start=2, target=9, limit=10, ops {x-1, x+1, x*2}; full BFS dry run reaching target in 3 steps (2→4→8→9), linked to `adsa-bfs`
 
 **Index updated**: no change needed (existing page entry already covers this)
+
+## 2026-06-17 — Minimum Spanning Tree (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created**:
+- `adsa-mst.md` — MST requirements (connected, undirected, weighted graph); clarified cycles are not required; minimum spanning forest for disconnected graphs
+
+**Index updated**: yes — added `adsa-mst` entry, bumped last-updated date to 2026-06-17
+
+## 2026-06-17 — MST Approaches: Brute Force vs Kruskal's (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages updated**:
+- `adsa-mst.md` — Added Approaches section: brute force (enumerate spanning trees, not paths), greedy Kruskal's algorithm (sort edges, add if no cycle, stop at V-1 edges), pseudocode
+
+**Index updated**: no change needed (existing `adsa-mst` entry already covers this)
+
+## 2026-06-18 — MST in Detail: Union-Find + Prim's Algorithm (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages updated**:
+- `adsa-mst.md` — Added Union-Find (Disjoint Set Union) cycle detection for Kruskal's `formsCycle` check with find/union pseudocode and path-compression complexity note; added Prim's algorithm (vertex-centric, min-heap, O(E log V)) pseudocode; added Kruskal's vs Prim's comparison table
+
+**Index updated**: yes — updated `adsa-mst` description, bumped last-updated date to 2026-06-18
