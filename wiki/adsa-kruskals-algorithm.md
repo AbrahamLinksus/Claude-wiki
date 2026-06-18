@@ -2,7 +2,7 @@
 
 **Summary**: Edge-centric greedy MST algorithm — sort all edges by weight ascending, then add each edge unless it would form a cycle, stopping once V−1 edges are chosen.
 
-**Pre-Req**: [[adsa-mst]], [[adsa-union-find]]
+**Pre-Req**: [[adsa-mst]]
 
 **Sources**: Session-built (no raw file)
 
