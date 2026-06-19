@@ -717,3 +717,14 @@ Append-only record of all wiki operations.
 - `adsa-dijkstras-algorithm.md` — Replaced informal "Why Greedy Works" argument with a formal induction proof (Subpaths-of-Shortest-Paths lemma, induction on pop order, contradiction argument for both `y = v` and `y ≠ v` cases), plus explicit explanation of why the proof fails under negative weights
 
 **Index updated**: no — description already covers correctness proof content
+
+## 2026-06-19 — Bellman-Ford Algorithm page added (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-bellman-ford.md` — Single-source shortest path with negative weights: core idea (no early locking vs Dijkstra's), why V-1 relaxation passes suffice, pseudocode, induction correctness proof, negative-weight-cycle detection via extra pass, dry run with a negative edge, complexity (O(V·E)), Bellman-Ford vs Dijkstra's comparison table
+
+**Index updated**: yes — added `adsa-bellman-ford` entry under Advanced Data Structures and Algorithms, bumped last-updated date to 2026-06-19
