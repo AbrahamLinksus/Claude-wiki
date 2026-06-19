@@ -165,7 +165,8 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-kruskals-algorithm]] — Edge-centric MST: sort edges, Union-Find cycle detection, Cycle Property correctness proof, O(E log E) (#adsa)
 - [[adsa-prims-algorithm]] — Vertex-centric MST: grow tree from start, min-heap frontier, Cut Property correctness proof, O(E log V) (#adsa)
 - [[adsa-dijkstras-algorithm]] — Single-source shortest path: min-heap relaxation, non-negative-weight correctness proof, BFS-as-special-case, priority-first search generalization (#adsa)
+- [[adsa-bellman-ford]] — Single-source shortest path with negative weights: V-1 edge relaxation passes, induction correctness proof, negative-cycle detection, Bellman-Ford vs Dijkstra's comparison (#adsa)
 
 ---
 
-**Last updated**: 2026-06-18
+**Last updated**: 2026-06-19
