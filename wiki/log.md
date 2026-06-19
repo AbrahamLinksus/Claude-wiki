@@ -706,3 +706,14 @@ Append-only record of all wiki operations.
 - `adsa-dijkstras-algorithm.md` — Single-source shortest path: core idea, min-heap rationale, pseudocode with stale-entry handling, non-negative-weight correctness argument, dry run, complexity table, Prim's vs Dijkstra's structural comparison, deeper theory (relaxation as monotone invariant, BFS-as-special-case, Bellman-equation/DP view, priority-first-search generalization covering Prim's/Dijkstra's/A*)
 
 **Index updated**: yes — added `adsa-dijkstras-algorithm` entry under Advanced Data Structures and Algorithms
+
+## 2026-06-19 — Dijkstra's correctness proof formalized (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages updated** (1):
+- `adsa-dijkstras-algorithm.md` — Replaced informal "Why Greedy Works" argument with a formal induction proof (Subpaths-of-Shortest-Paths lemma, induction on pop order, contradiction argument for both `y = v` and `y ≠ v` cases), plus explicit explanation of why the proof fails under negative weights
+
+**Index updated**: no — description already covers correctness proof content
