@@ -48,11 +48,51 @@ function dijkstra(graph, source):
 
 The heap can hold **stale entries** for a vertex (pushed before a shorter path was found) — the `if u in visited: continue` guard makes it safe to discard them rather than needing a "decrease-key" operation.
 
-## Why Greedy Works — and Why Non-Negative Weights Matter
+## Why Greedy Works — Formal Proof
 
-When `u` is popped with the smallest tentative distance, that distance is **final** — no other path to `u` can be shorter, because any alternative path must pass through some other unvisited vertex first, and every unvisited vertex already has `dist[] ≥ dist[u]` (that's why `u` was popped first, not it). Stacking more non-negative weights onto a value already ≥ `dist[u]` cannot produce something smaller than `dist[u]`.
+### Lemma: Subpaths of Shortest Paths Are Shortest Paths
 
-This breaks immediately with negative weights: a vertex can be locked in as "final," then a later negative edge could reveal a shorter path through a vertex that was already visited — but by then it's too late to revise. This is exactly why **Bellman-Ford** exists for negative weights — it never locks anything in early; it just relaxes every edge V−1 times.
+If `P` is a shortest path from `source` to `v`, and `x` is any vertex on `P`, the portion of `P` from `source` to `x` is itself a shortest path to `x`.
+
+**Why**: if a cheaper path to `x` existed, splicing it with the rest of `P` (from `x` to `v`) would give a path to `v` cheaper than `P` — contradicting that `P` is shortest. This relies on non-negative weights, so "the rest of `P`" is unaffected by the swap.
+
+### Claim
+
+When the algorithm pops vertex `v` with heap value `dist[v]`, that value equals `δ(source, v)`, the true shortest-path distance — for every `v`, not just direct neighbors of the source.
+
+### Proof — Induction on Pop Order
+
+Let `u₁, u₂, u₃, …` be the order vertices are popped (finalized). By the heap property, `dist[u₁] ≤ dist[u₂] ≤ dist[u₃] ≤ …`.
+
+**Base case**: `u₁ = source`, `dist[source] = 0 = δ(source, source)`. Trivially true.
+
+**Inductive hypothesis**: for the first `k` pops, `dist[uᵢ] = δ(source, uᵢ)` for all `i ≤ k`.
+
+**Inductive step**: let `v` be the `(k+1)`-th pop. Since `dist[v]` is the length of *some* real relaxed path, `dist[v] ≥ δ(source, v)` always holds. The only thing left to rule out is `dist[v] > δ(source, v)`.
+
+Suppose, for contradiction, the true shortest path `P` from `source` to `v` is strictly shorter than `dist[v]`. Walk along `P` from `source`. Since `source` is finalized and `v` is not yet, there must be a **first unfinalized vertex** on `P` — call it `y` (possibly `y = v`).
+
+Let `x` be `y`'s predecessor on `P`. Since `y` is the *first* unfinalized vertex, `x` is already finalized, so by the inductive hypothesis `dist[x] = δ(source, x)`. By the Lemma, the prefix of `P` up to `x` is a shortest path, so `δ(source, x) + weight(x, y) = δ(source, y)`.
+
+When `x` was popped, edge `(x, y)` was relaxed, so:
+
+```
+dist[y] ≤ dist[x] + weight(x, y) = δ(source, x) + weight(x, y) = δ(source, y)
+```
+
+**Case `y = v`**: then `dist[v] ≤ δ(source, v)`, which combined with `dist[v] ≥ δ(source, v)` forces equality — contradicting the assumption that they differ.
+
+**Case `y ≠ v`**: `y` lies strictly before `v` on `P`. Since all remaining edges from `y` to `v` along `P` have non-negative weight, `δ(source, y) ≤ δ(source, v) < dist[v]`. Chaining: `dist[y] ≤ δ(source, y) < dist[v]`. But `y` is **unfinalized** and `v` was just popped as the *minimum* of everything unfinalized in the heap, so `dist[v] ≤ dist[y]` must hold — contradicting `dist[y] < dist[v]`.
+
+Either case is a contradiction, so `dist[v] > δ(source, v)` is false → **`dist[v] = δ(source, v)` exactly when `v` is popped.** ∎
+
+### The Key Insight
+
+The argument hinges on one fact: **a shortest path can never duck into unfinalized territory and come back out cheaper**, because non-negative weights mean re-entering finalized territory can only add cost, never refund it. The destination's value, the moment it's popped, is already the true minimum — not a heuristic, but a structural consequence of pop order.
+
+### Why Negative Weights Break This
+
+The proof leans on `δ(source, y) ≤ δ(source, v)` for `y` earlier on the shortest path than `v` — true only because all subsequent edge weights from `y` to `v` are non-negative. With a negative edge, a vertex already finalized as "final" could later be reached more cheaply through a path discovered afterward, but by then it's locked in and never revisited. This is exactly why **Bellman-Ford** exists for negative weights — it never locks anything in early; it just relaxes every edge V−1 times.
 
 ## Dry Run
 
