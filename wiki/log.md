@@ -695,3 +695,14 @@ Append-only record of all wiki operations.
 - `adsa-mst.md` — Converted to overview/topic-map page (AVL-trees pattern): Requirements, Approaches (brute force + why greedy works via matroid structure), Optimality Guarantee, Topic Map linking to the two new pages, Kruskal's vs Prim's comparison table; algorithm-specific pseudocode/proofs moved out to their own pages
 
 **Index updated**: yes — added `adsa-kruskals-algorithm` and `adsa-prims-algorithm` entries, updated `adsa-mst` description
+
+## 2026-06-19 — Dijkstra's Algorithm page added (ADSA)
+
+**Source**: Session-built (no raw file)
+
+**Tag**: #adsa
+
+**Pages created** (1):
+- `adsa-dijkstras-algorithm.md` — Single-source shortest path: core idea, min-heap rationale, pseudocode with stale-entry handling, non-negative-weight correctness argument, dry run, complexity table, Prim's vs Dijkstra's structural comparison, deeper theory (relaxation as monotone invariant, BFS-as-special-case, Bellman-equation/DP view, priority-first-search generalization covering Prim's/Dijkstra's/A*)
+
+**Index updated**: yes — added `adsa-dijkstras-algorithm` entry under Advanced Data Structures and Algorithms
