@@ -164,6 +164,7 @@ Personal knowledge base — maintained by Claude Code.
 - [[adsa-mst]] — Minimum Spanning Tree overview: requirements, why greedy works (matroid), optimality guarantee, topic map (#adsa)
 - [[adsa-kruskals-algorithm]] — Edge-centric MST: sort edges, Union-Find cycle detection, Cycle Property correctness proof, O(E log E) (#adsa)
 - [[adsa-prims-algorithm]] — Vertex-centric MST: grow tree from start, min-heap frontier, Cut Property correctness proof, O(E log V) (#adsa)
+- [[adsa-dijkstras-algorithm]] — Single-source shortest path: min-heap relaxation, non-negative-weight correctness proof, BFS-as-special-case, priority-first search generalization (#adsa)
 
 ---
 
